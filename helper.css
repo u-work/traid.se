@@ -1,0 +1,26 @@
+a {
+
+    color: #666666;
+
+
+    // COLORS PROPOSED BY ERIK
+    color: rgba(215, 222, 220, 1);
+    color: rgba(35, 32, 32, 1);
+    color: rgba(224, 229, 155, 1);
+    color: rgba(40, 54, 65, 1);
+    color: rgba(38, 102, 89, 1);
+}
+
+a{
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+
+}
+
+
+GatsbyImageSharpFluid
+GatsbyImageSharpFluid_noBase64
+GatsbyImageSharpFluid_tracedSVG
+GatsbyImageSharpFluid_withWebp
+GatsbyImageSharpFluid_withWebp_noBase64
+GatsbyImageSharpFluid_withWebp_tracedSVG
