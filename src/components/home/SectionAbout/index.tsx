@@ -4,13 +4,13 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import { Fade } from "react-reveal"
 
-import { title } from "../../styles/theme"
+import { title } from "../../../styles/theme"
 
-const SectionAbout = ({ ref }) => {
+const SectionAbout: React.FC = () => {
   const { protest } = useStaticQuery(query)
 
   return (
-    <SectionAboutWrapper ref={ref}>
+    <SectionAboutWrapper>
       <div className="container mb-2">
         <Fade bottom fraction={0.1}>
           <h3 className="mb-3">Om Traid</h3>
@@ -84,7 +84,9 @@ const SectionAboutWrapper = styled.section`
         width: 100%;
         height: 100%;
         object-position: center;
+        -o-object-position: center;
         object-fit: center;
+        -o-object-fit: center;
       }
     }
   }
@@ -96,6 +98,7 @@ const SectionAboutWrapper = styled.section`
 
       .content{
         flex-direction: column;
+        -ms-flex-direction: column;
         align-items: center;
 
         .left {

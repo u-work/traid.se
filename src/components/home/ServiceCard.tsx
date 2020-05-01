@@ -2,7 +2,19 @@ import React from "react"
 import styled from "styled-components"
 import { Fade } from "react-reveal"
 
-const ServiceCard = ({ image, title, desc, delay }) => {
+interface IServiceCardProps {
+  image: string
+  title: string
+  desc: string
+  delay: number
+}
+
+const ServiceCard: React.FC<IServiceCardProps> = ({
+  image,
+  title,
+  desc,
+  delay,
+}) => {
   return (
     <ServiceCardWrapper>
       <div className="top">

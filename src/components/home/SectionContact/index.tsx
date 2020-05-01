@@ -2,13 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import { Fade } from "react-reveal"
 
-import ContactCard from "../ContactCard/ContactCard"
+import ContactCard from "../../ContactCard/ContactCard"
 
-import { title } from "../../styles/theme"
+import { title } from "../../../styles/theme"
 
-const SectionContact = ({ ref }) => {
+const SectionContact: React.FC = () => {
   return (
-    <SectionContackWrapper ref={ref}>
+    <SectionContackWrapper>
       <div className="container">
         <Fade>
           <h3 className="mb-3">Kontakt</h3>

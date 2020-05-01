@@ -4,8 +4,10 @@ import { Element, Events, scrollSpy } from "react-scroll"
 import Layout from "../components/layout/Layout"
 import Hero from "../components/hero/Hero"
 import SectionServices from "../components/home/SectionServices"
+import SectionCore from "../components/home/SectionCore"
 import SectionAbout from "../components/home/SectionAbout"
 import SectionContact from "../components/home/SectionContact"
+import SectionSustainability from "../components/home/SectionSustainability"
 
 const Index = () => {
   useEffect(() => {
@@ -31,6 +33,8 @@ const Index = () => {
       <Element name="sectionServices">
         <SectionServices />
       </Element>
+      <SectionSustainability />
+      <SectionCore />
       <Element name="sectionAbout">
         <SectionAbout />
       </Element>

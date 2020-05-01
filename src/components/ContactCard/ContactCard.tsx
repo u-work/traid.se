@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-import icon1 from "../../images/icons/woman.svg"
-import icon2 from "../../images/icons/student.svg"
+const icon1 = require("../../images/icons/woman.svg")
+const icon2 = require("../../images/icons/student.svg")
 
-const ContactCard = () => {
+const ContactCard: React.FC = () => {
   const icons = [icon1, icon2]
 
   return (

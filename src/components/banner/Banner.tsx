@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Banner = () => {
+const Banner: React.FC = () => {
   return (
     <BannerWrapper>
       <div className="content">

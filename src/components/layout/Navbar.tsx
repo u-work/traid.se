@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "react-scroll"
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <NavbarWrapper>
       <div className="container row">

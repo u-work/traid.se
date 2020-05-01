@@ -6,11 +6,11 @@ import { ThemeProvider } from "styled-components"
 import "./layout.css"
 import { theme } from "../../styles/theme"
 
-const Layout = ({ children, allRef }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Navbar allRef={allRef} />
+        <Navbar />
         {children}
         <Footer />
       </ThemeProvider>

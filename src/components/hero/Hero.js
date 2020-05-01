@@ -5,12 +5,12 @@ import BackgroundImage from "gatsby-background-image"
 import Banner from "../banner/Banner"
 
 const Hero = () => {
-  const { flower } = useStaticQuery(data)
+  const data = useStaticQuery(query)
 
   return (
     <HeroWrapper>
       <BackgroundImage
-        fluid={flower.childImageSharp.fluid}
+        fluid={data.flower.childImageSharp.fluid}
         className="bcgImage"
       >
         <Banner />
@@ -19,7 +19,7 @@ const Hero = () => {
   )
 }
 
-const data = graphql`
+const query = graphql`
   query {
     flower: file(relativePath: { eq: "give-flower.jpg" }) {
       childImageSharp {

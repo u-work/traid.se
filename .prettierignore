@@ -2,5 +2,6 @@
 package.json
 package-lock.json
 public
+*.md
 
 /src/globalStyles/index.css

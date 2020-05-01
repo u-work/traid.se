@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-import { services } from "../../data/services"
-import ServiceCard from "./ServiceCard"
+import { services } from "../../../data/services"
+import ServiceCard from "../ServiceCard"
 
-const SectionServices = ({ ref }) => {
+const SectionServices: React.FC = () => {
   const renderServices = Object.values(services).map((service, index) => (
     <ServiceCard
       key={index}
@@ -16,7 +16,7 @@ const SectionServices = ({ ref }) => {
   ))
 
   return (
-    <SectionServicesWrapper ref={ref}>
+    <SectionServicesWrapper>
       <div className="container row">{renderServices}</div>
     </SectionServicesWrapper>
   )
