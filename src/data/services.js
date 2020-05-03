@@ -1,6 +1,6 @@
-import kopIcon from "../images/icons/shop.svg"
-import geIcon from "../images/icons/shopping-bag.svg"
-import saljIcon from "../images/icons/discount.svg"
+import kopIcon from "../images/icons/commerce-and-shopping.svg"
+import geIcon from "../images/icons/hand.svg"
+import saljIcon from "../images/icons/business-and-finance.svg"
 
 export const services = {
   buy: {

@@ -5,6 +5,8 @@ export const theme = {
   secondaryColor: "#006498",
   textPrimary: "#666",
 
+  // Breakpoints
+  tabletWidth: "900px",
   mobileWidth: "600px",
 }
 

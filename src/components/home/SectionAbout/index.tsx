@@ -7,34 +7,26 @@ import { Fade } from "react-reveal"
 import { title } from "../../../styles/theme"
 
 const SectionAbout: React.FC = () => {
-  const { protest } = useStaticQuery(query)
+  const { protest, text } = useStaticQuery(query)
 
   return (
     <SectionAboutWrapper>
-      <div className="container mb-2">
-        <Fade bottom fraction={0.1}>
-          <h3 className="mb-3">Om Traid</h3>
+      <Fade bottom fraction={0.1}>
+        <div className="container mb-2">
+          <h3 className="mb-2">Om Traid</h3>
           <div className="content">
-            <div className="left">
-              <h4 className="mb-2">
-                Vi hjälper dig att skräddarsy ett elavtal som passar för just
-                ditt företag
-              </h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Debitis rerum nihil reiciendis dolore deserunt incidunt
-                praesentium nemo fuga? Velit fugit suscipit ipsam cum
-                aspernatur, repudiandae vero, maiores perferendis atque
-                quibusdam minus nesciunt delectus illo, culpa facilis deserunt
-                corrupti. Ex temporibus perspiciatis nesciunt.
-              </p>
+            <div className="description">
+              <div
+                className="description-content"
+                dangerouslySetInnerHTML={{ __html: text.html }}
+              ></div>
             </div>
-            <div className="right">
+            <div className="image-container">
               <Image className="image" fluid={protest.childImageSharp.fluid} />
             </div>
           </div>
-        </Fade>
-      </div>
+        </div>
+      </Fade>
     </SectionAboutWrapper>
   )
 }
@@ -47,6 +39,9 @@ const query = graphql`
           ...GatsbyImageSharpFluid_withWebp
         }
       }
+    }
+    text: markdownRemark(frontmatter: { title: { eq: "Om Traid" } }) {
+      html
     }
   }
 `
@@ -64,31 +59,54 @@ const SectionAboutWrapper = styled.section`
 
   .content {
     display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
 
-    .left {
+    .description {
       width: 100%;
       height: 100%;
       padding: 1rem 15rem;
       text-align: center;
 
-      p {
+      .description-content  {
+        h4 {
+          margin-bottom: 3rem;
+        }
+        p {
           color: ${props => props.theme.textPrimary}
       }
+      }
+
+      
     }
 
-    .right {
-      width: 100%;
-      height: 100%;
+    .image-container {
+      width: 60%;
+      height: 40rem;
+      margin: 0 auto;
+      margin-top: 3rem;
 
       .image {
         width: 100%;
         height: 100%;
-        object-position: center;
-        -o-object-position: center;
-        object-fit: center;
-        -o-object-fit: center;
+        object-position: top;
+        -o-object-position: top;
+        object-fit: cover;
+        -o-object-fit: cover;
       }
     }
+  }
+
+  @media (max-width: ${props => props.theme.tabletWidth}){
+    .content {
+      .description{
+      padding: 1rem;
+    }
+    .image-container {
+          width: 100%;
+        }
+    }
+
   }
 
   @media (max-width: ${props => props.theme.mobileWidth}) {
@@ -100,6 +118,8 @@ const SectionAboutWrapper = styled.section`
         flex-direction: column;
         -ms-flex-direction: column;
         align-items: center;
+
+
 
         .left {
           padding: 2rem 2rem;

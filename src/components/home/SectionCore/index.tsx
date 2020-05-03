@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { data } from "./data"
 const circleSvg = require("../../../images/circle-icons.svg")
+const icons = require("../../../images/Image-34.svg")
 
 const SectionCore: React.FC = () => {
   return (
@@ -33,6 +34,7 @@ const SectionCore: React.FC = () => {
 const SectionCoreWrapper = styled.section`
   width: 100%;
   height: 60rem;
+  padding-top: 3rem;
 
   .content {
     max-width: 110rem;
@@ -49,6 +51,10 @@ const SectionCoreWrapper = styled.section`
     height: 100%;
     padding-left: 7rem;
     padding-top: 7rem;
+  }
+
+  .list-content {
+    width: 85%;
   }
 
   .list-title {
@@ -83,6 +89,31 @@ const SectionCoreWrapper = styled.section`
     font-size: 3rem;
     margin-top: 2rem;
     text-align: center;
+  }
+
+  @media (max-width: ${props => props.theme.mobileWidth}) {
+    height: 100%;
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .list {
+      padding: 0;
+      margin-bottom: 3rem;
+    }
+
+    .list-title {
+      text-align: center;
+    }
+
+    .list-content {
+      margin: 0 auto;
+      li {
+        text-align: center;
+      }
+    }
   }
 `
 

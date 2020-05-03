@@ -4,7 +4,14 @@ import styled from "styled-components"
 const icon1 = require("../../images/icons/woman.svg")
 const icon2 = require("../../images/icons/student.svg")
 
-const ContactCard: React.FC = () => {
+interface IContactCardProps {
+  name: string
+  email: string
+  imgUrl: string
+}
+
+const ContactCard: React.FC<IContactCardProps> = ({ name, email, imgUrl }) => {
+  // To replace when photos are available
   const icons = [icon1, icon2]
 
   return (
@@ -13,12 +20,8 @@ const ContactCard: React.FC = () => {
         <img src={icons[Math.floor(Math.random() * 2)]} alt="contact" />
       </div>
       <div className="bottom">
-        <h4 className="mb-2">John Doe</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam
-          dolore voluptatem eius soluta unde aspernatur sapiente! Magnam,
-          perferendis quidem!
-        </p>
+        <h4 className="mb-2">{name}</h4>
+        <p>{email}</p>
       </div>
     </ContactCardWrapper>
   )
@@ -50,6 +53,10 @@ const ContactCardWrapper = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+
+  @media (max-width: ${props => props.theme.tabletWidth}) {
+    margin: 0;
   }
 
   @media (max-width: ${props => props.theme.mobileWidth}) {

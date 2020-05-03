@@ -69,9 +69,12 @@ const ServiceCardWrapper = styled.div`
     .desc {
       font-size: 1.6rem;
       font-weight: 400;
-      color: ${props => props.theme.secondaryColor};
+      color: ${props => props.theme.textPrimary};
       padding-left: 3rem;
     }
+  }
+  @media (max-width: ${props => props.theme.tabletWidth}) {
+    margin: 0;
   }
 
   @media (max-width: ${props => props.theme.mobileWidth}) {

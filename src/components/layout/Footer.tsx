@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <FooterWrapper>
       <div className="container">
         <p style={{ fontSize: "4rem", color: "#fff", textAlign: "center" }}>
-          FOOTER
+          TRAID
         </p>
 
         <FormWrapper
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           }}
         >
           <div className="form-group">
-            <label>Get our newsletter</label>
+            <label>Get our newsletter:</label>
             <input
               className="form-input"
               type="text"
@@ -38,9 +38,10 @@ const FooterWrapper = styled.footer`
   padding: 4rem 0;
 
   .container {
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 `
 

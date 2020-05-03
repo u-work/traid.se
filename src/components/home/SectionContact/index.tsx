@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Fade } from "react-reveal"
 
+import { team } from "./data"
 import ContactCard from "../../ContactCard/ContactCard"
 
 import { title } from "../../../styles/theme"
@@ -14,15 +15,15 @@ const SectionContact: React.FC = () => {
           <h3 className="mb-3">Kontakt</h3>
         </Fade>
         <div className="content">
-          <Fade bottom delay={100}>
-            <ContactCard />
-          </Fade>
-          <Fade bottom delay={200}>
-            <ContactCard />
-          </Fade>
-          <Fade bottom delay={300}>
-            <ContactCard />
-          </Fade>
+          {team.map((member, index) => (
+            <Fade bottom delay={(index + 1) * 100}>
+              <ContactCard
+                name={member.name}
+                email={member.email}
+                imgUrl={member.imgUrl}
+              />
+            </Fade>
+          ))}
         </div>
       </div>
     </SectionContackWrapper>

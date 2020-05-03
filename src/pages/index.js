@@ -33,7 +33,10 @@ const Index = () => {
       <Element name="sectionServices">
         <SectionServices />
       </Element>
-      <SectionSustainability />
+      <Element name="sectionSustainability">
+        <SectionSustainability />
+      </Element>
+
       <SectionCore />
       <Element name="sectionAbout">
         <SectionAbout />

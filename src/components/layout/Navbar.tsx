@@ -14,17 +14,27 @@ const Navbar: React.FC = () => {
             to="sectionServices"
             spy={true}
             smooth={true}
-            offset={0}
+            offset={-40}
             duration={500}
             className="navLink"
           >
-            Vad kan du ge
+            Hur fungerar Traid
+          </Link>
+          <Link
+            to="sectionSustainability"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+            className="navLink"
+          >
+            Hållbarhet
           </Link>
           <Link
             to="sectionAbout"
             spy={true}
             smooth={true}
-            offset={0}
+            offset={-40}
             duration={500}
             className="navLink"
           >
@@ -34,11 +44,11 @@ const Navbar: React.FC = () => {
             to="sectionContact"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={-40}
             duration={500}
             className="navLink"
           >
-            Kontact
+            Kontakt
           </Link>
         </div>
       </div>
