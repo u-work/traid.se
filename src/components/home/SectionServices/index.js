@@ -1,23 +1,26 @@
 import React from "react"
 import styled from "styled-components"
 
-import { services } from "../../../data/services"
-import ServiceCard from "../ServiceCard"
+import ServiceCard from "./ServiceCard"
 
-const SectionServices: React.FC = () => {
-  const renderServices = Object.values(services).map((service, index) => (
-    <ServiceCard
-      key={index}
-      title={service.name}
-      desc={service.desc}
-      image={service.icon}
-      delay={index * 150}
-    />
-  ))
+const SectionServices = ({ data }) => {
+  const {
+    frontmatter: { services },
+  } = data
 
   return (
     <SectionServicesWrapper>
-      <div className="container row">{renderServices}</div>
+      <div className="container row">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={service.name}
+            title={service.name}
+            desc={service.description}
+            image={service.icon}
+            delay={index * 150}
+          />
+        ))}
+      </div>
     </SectionServicesWrapper>
   )
 }

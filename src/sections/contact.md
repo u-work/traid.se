@@ -1,19 +1,20 @@
 ---
+title: Kontakt
 team:
   - name: Erik Skeppar
     position: CEO
     email: erik@traid.se
-    image: /image/erik.jpg
+    image: /img/erik.jpg
   - name: Francis Menkes
     position: Lead developer
     email: francis@traid.se
-    image: /image/francis.jpg
+    image: /img/francis.jpg
   - name: Robin Sigerbrant
     position: "?"
     email: robin@traid.se
-    image: /image/robin.jpg
+    image: /img/robin.jpg
   - name: David von Gegerfelt
     position: Lead Designer
     email: david@traid.se
-    image: /image/david.jpg
+    image: /img/david.jpg
 ---

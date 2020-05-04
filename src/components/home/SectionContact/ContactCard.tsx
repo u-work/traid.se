@@ -7,10 +7,10 @@ const icon2 = require("../../images/icons/student.svg")
 interface IContactCardProps {
   name: string
   email: string
-  imgUrl: string
+  fluid: any
 }
 
-const ContactCard: React.FC<IContactCardProps> = ({ name, email, imgUrl }) => {
+const ContactCard: React.FC<IContactCardProps> = ({ name, email, fluid }) => {
   // To replace when photos are available
   const icons = [icon1, icon2]
 

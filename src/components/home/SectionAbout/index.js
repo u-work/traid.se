@@ -1,28 +1,30 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import { Fade } from "react-reveal"
 
 import { title } from "../../../styles/theme"
 
-const SectionAbout: React.FC = () => {
-  const { protest, text } = useStaticQuery(query)
+const SectionAbout = ({ data }) => {
+  const { frontmatter, html } = data
 
   return (
     <SectionAboutWrapper>
       <Fade bottom fraction={0.1}>
         <div className="container mb-2">
-          <h3 className="mb-2">Om Traid</h3>
+          <h3 className="mb-2">{frontmatter.title}</h3>
           <div className="content">
             <div className="description">
               <div
                 className="description-content"
-                dangerouslySetInnerHTML={{ __html: text.html }}
+                dangerouslySetInnerHTML={{ __html: html }}
               ></div>
             </div>
             <div className="image-container">
-              <Image className="image" fluid={protest.childImageSharp.fluid} />
+              <Image
+                className="image"
+                fluid={frontmatter.image.childImageSharp.fluid}
+              />
             </div>
           </div>
         </div>
@@ -30,21 +32,6 @@ const SectionAbout: React.FC = () => {
     </SectionAboutWrapper>
   )
 }
-
-const query = graphql`
-  query {
-    protest: file(relativePath: { eq: "protest.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    text: markdownRemark(frontmatter: { title: { eq: "Om Traid" } }) {
-      html
-    }
-  }
-`
 
 const SectionAboutWrapper = styled.section`
   width: 100%;

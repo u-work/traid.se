@@ -2,25 +2,25 @@ import React from "react"
 import styled from "styled-components"
 import { Fade } from "react-reveal"
 
-import { team } from "./data"
 import ContactCard from "../../ContactCard/ContactCard"
 
 import { title } from "../../../styles/theme"
 
-const SectionContact: React.FC = () => {
+const SectionContact = ({ data }) => {
+  const { frontmatter } = data
   return (
     <SectionContackWrapper>
       <div className="container">
         <Fade>
-          <h3 className="mb-3">Kontakt</h3>
+          <h3 className="mb-3">{frontmatter.data}</h3>
         </Fade>
         <div className="content">
-          {team.map((member, index) => (
+          {frontmatter.team.map((member, index) => (
             <Fade key={index} bottom delay={(index + 1) * 100}>
               <ContactCard
                 name={member.name}
                 email={member.email}
-                imgUrl={member.imgUrl}
+                fluid={member.image.childImageSharp.fluid}
               />
             </Fade>
           ))}

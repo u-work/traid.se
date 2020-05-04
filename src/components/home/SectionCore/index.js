@@ -1,25 +1,21 @@
 import React from "react"
 import Image from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
 import { Fade } from "react-reveal"
 
-import { data } from "./data"
-const circleSvg = require("../../../images/circle-icons.svg")
-const icons = require("../../../images/Image-34.svg")
-
-const SectionCore: React.FC = () => {
+const SectionCore = ({ data }) => {
+  const { frontmatter } = data
   return (
     <SectionCoreWrapper>
       <div className="content">
         <Fade left>
           <div className="list">
-            <h4 className="list-title">Vår kärnverksamhet</h4>
+            <h4 className="list-title">{frontmatter.title}</h4>
             <ul className="list-content">
-              {data.map((item, index) => (
+              {frontmatter.content.map((item, index) => (
                 <li key={index} className="list-content-item">
                   <span style={{ marginRight: "4px" }}>{index + 1}.</span>
-                  {item.title}
+                  {item.description}
                 </li>
               ))}
             </ul>
@@ -27,8 +23,11 @@ const SectionCore: React.FC = () => {
         </Fade>
         <Fade right>
           <div className="circle">
-            <img src={circleSvg} alt="core-features-circle" />
-            <p className="circle-label">- I en cirkular handelsplats</p>
+            <img
+              src={frontmatter.childImageSharp.fixed.src}
+              alt="core-features-circle"
+            />
+            <p className="circle-label">{frontmatter.circleCaption}</p>
           </div>
         </Fade>
       </div>

@@ -1,46 +1,29 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import { title } from "../../../styles/theme"
 
-const SectionSustainability: React.FC = () => {
-  const { text, clothing } = useStaticQuery(query)
-
+const SectionSustainability = ({ data }) => {
+  const { html, frontmatter } = data
   return (
     <SectionWrapper>
-      <h3 className="title">Traid & hållbarhet</h3>
+      <h3 className="title">{frontmatter.title}</h3>
       <BackgroundImage
-        fluid={clothing.childImageSharp.fluid}
+        fluid={frontmatter.bgImage.childImageSharp.fluid}
         style={{ position: "relative" }}
       >
         <div className="overlay"></div>
         <div className="container">
           <div
             className="content"
-            dangerouslySetInnerHTML={{ __html: text.html }}
+            dangerouslySetInnerHTML={{ __html: html }}
           ></div>
         </div>
       </BackgroundImage>
     </SectionWrapper>
   )
 }
-
-const query = graphql`
-  query {
-    text: markdownRemark(frontmatter: { title: { eq: "sustainability" } }) {
-      html
-    }
-    clothing: file(relativePath: { eq: "clothing-store.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 900) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
 
 const SectionWrapper = styled.section`
   .container {
