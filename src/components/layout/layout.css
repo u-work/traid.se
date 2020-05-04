@@ -24,6 +24,7 @@ body {
 p {
   line-height: 1.6;
   color: rgb(94, 94, 94);
+  margin-bottom: 1.6rem;
 }
 
 a,

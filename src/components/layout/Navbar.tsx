@@ -5,7 +5,7 @@ import { Link } from "react-scroll"
 const Navbar: React.FC = () => {
   return (
     <NavbarWrapper>
-      <div className="container row">
+      <div className="row">
         <div className="logo">
           <h4>TRAID</h4>
         </div>
@@ -69,6 +69,7 @@ const NavbarWrapper = styled.nav`
   .row {
     height: 100%;
     width: 100%;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
   }

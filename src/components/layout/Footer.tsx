@@ -43,6 +43,12 @@ const FooterWrapper = styled.footer`
     align-items: center;
     justify-content: space-evenly;
   }
+
+  @media (max-width: ${props => props.theme.mobileWidth}) {
+    .container {
+      flex-direction: column;
+    }
+  }
 `
 
 const FormWrapper = styled.form`
@@ -91,6 +97,10 @@ const FormWrapper = styled.form`
     &:active {
       transform: translateY(0px);
     }
+  }
+
+  @media (max-width: ${props => props.theme.mobileWidth}) {
+    margin: auto;
   }
 `
 

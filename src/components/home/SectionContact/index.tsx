@@ -16,7 +16,7 @@ const SectionContact: React.FC = () => {
         </Fade>
         <div className="content">
           {team.map((member, index) => (
-            <Fade bottom delay={(index + 1) * 100}>
+            <Fade key={index} bottom delay={(index + 1) * 100}>
               <ContactCard
                 name={member.name}
                 email={member.email}
@@ -45,6 +45,7 @@ const SectionContackWrapper = styled.section`
     height: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
   }
 
 

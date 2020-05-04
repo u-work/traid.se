@@ -42,6 +42,10 @@ const HeroWrapper = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  @media (max-width: ${props => props.theme.mobileWidth}) {
+    height: 60rem;
+  }
 `
 
 export default Hero

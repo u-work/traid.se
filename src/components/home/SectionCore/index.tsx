@@ -2,6 +2,7 @@ import React from "react"
 import Image from "gatsby-image"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
+import { Fade } from "react-reveal"
 
 import { data } from "./data"
 const circleSvg = require("../../../images/circle-icons.svg")
@@ -11,21 +12,25 @@ const SectionCore: React.FC = () => {
   return (
     <SectionCoreWrapper>
       <div className="content">
-        <div className="list">
-          <h4 className="list-title">Vår kärnverksamhet</h4>
-          <ul className="list-content">
-            {data.map((item, index) => (
-              <li key={index} className="list-content-item">
-                <span style={{ marginRight: "4px" }}>{index + 1}.</span>
-                {item.title}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="circle">
-          <img src={circleSvg} alt="core-features-circle" />
-          <p className="circle-label">- I en cirkular handelsplats</p>
-        </div>
+        <Fade left>
+          <div className="list">
+            <h4 className="list-title">Vår kärnverksamhet</h4>
+            <ul className="list-content">
+              {data.map((item, index) => (
+                <li key={index} className="list-content-item">
+                  <span style={{ marginRight: "4px" }}>{index + 1}.</span>
+                  {item.title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Fade>
+        <Fade right>
+          <div className="circle">
+            <img src={circleSvg} alt="core-features-circle" />
+            <p className="circle-label">- I en cirkular handelsplats</p>
+          </div>
+        </Fade>
       </div>
     </SectionCoreWrapper>
   )
@@ -81,6 +86,7 @@ const SectionCoreWrapper = styled.section`
       object-position: center;
       -o-object-fit: contain;
       -o-object-position: contain;
+      background-color: transparent;
     }
   }
 
@@ -106,6 +112,7 @@ const SectionCoreWrapper = styled.section`
 
     .list-title {
       text-align: center;
+      margin-left: 0rem;
     }
 
     .list-content {
@@ -113,6 +120,10 @@ const SectionCoreWrapper = styled.section`
       li {
         text-align: center;
       }
+    }
+
+    .circle-label {
+      font-size: 2.5rem;
     }
   }
 `

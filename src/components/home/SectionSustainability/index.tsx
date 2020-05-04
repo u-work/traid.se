@@ -79,6 +79,12 @@ const SectionWrapper = styled.section`
       border-radius: 6px;
     }
   }
+
+  @media (max-width: ${props => props.theme.mobileWidth}) {
+    .content {
+      padding: 1rem;
+    }
+  }
 `
 
 export default SectionSustainability

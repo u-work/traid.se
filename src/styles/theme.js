@@ -1,4 +1,4 @@
-import { css, createGlobalStyle } from "styled-components"
+import { css } from "styled-components"
 
 export const theme = {
   primaryColor: "#d66464",

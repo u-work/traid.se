@@ -1,20 +1,30 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Banner: React.FC = () => {
+  const data = useStaticQuery(query)
+
   return (
     <BannerWrapper>
       <div className="content">
         <h2 className="title">Vad kan du ge ?</h2>
-        <p className="subheader">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio
-          corporis exercitationem ducimus harum id quo deserunt repellendus
-          obcaecati explicabo. Placeat.
-        </p>
+        <div
+          className="subheader"
+          dangerouslySetInnerHTML={{ __html: data.text.html }}
+        ></div>
       </div>
     </BannerWrapper>
   )
 }
+
+const query = graphql`
+  query {
+    text: markdownRemark(frontmatter: { title: { eq: "banner" } }) {
+      html
+    }
+  }
+`
 
 const BannerWrapper = styled.div`
   height: 100%;
@@ -25,7 +35,7 @@ const BannerWrapper = styled.div`
   background-color: rgba(255, 255, 255, 0.2);
 
   .content {
-    max-width: 60rem;
+    max-width: 50rem;
     text-align: center;
   }
 
@@ -38,7 +48,12 @@ const BannerWrapper = styled.div`
 
   .subheader {
     margin-top: 3rem;
-    color: ${props => props.theme.secondaryColor};
+
+    p {
+      color: #444;
+      font-size: 2rem;
+      font-weight: 400;
+    }
   }
 
   @media (max-width: ${props => props.theme.mobileWidth}) {
