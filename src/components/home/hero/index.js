@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import Banner from "../banner/Banner"
+import Banner from "../banner"
 
 const Hero = () => {
   const data = useStaticQuery(query)

@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { Element, Events, scrollSpy } from "react-scroll"
 
 import Layout from "../components/layout/Layout"
-import Hero from "../components/hero/Hero"
+import Hero from "../components/home/hero"
 import SectionServices from "../components/home/SectionServices"
 import SectionCore from "../components/home/SectionCore"
 import SectionAbout from "../components/home/SectionAbout"

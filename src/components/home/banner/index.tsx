@@ -52,7 +52,7 @@ const BannerWrapper = styled.div`
     p {
       color: #444;
       font-size: 2rem;
-      font-weight: 400;
+      font-weight: 500;
     }
   }
 

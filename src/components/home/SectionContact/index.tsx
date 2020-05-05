@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Fade } from "react-reveal"
 
 import { team } from "./data"
-import ContactCard from "../../ContactCard/ContactCard"
+import ContactCard from "../../contactCard"
 
 import { title } from "../../../styles/theme"
 

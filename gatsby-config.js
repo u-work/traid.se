@@ -40,6 +40,5 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-playground`,
-    "gatsby-plugin-mdx",
   ],
 }
