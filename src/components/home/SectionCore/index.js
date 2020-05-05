@@ -14,7 +14,9 @@ const SectionCore = ({ data }) => {
             <ul className="list-content">
               {frontmatter.content.map((item, index) => (
                 <li key={index} className="list-content-item">
-                  <span style={{ marginRight: "4px" }}>{index + 1}.</span>
+                  <div className="icon-container">
+                    <img src={item.icon} alt={item.title} />
+                  </div>
                   {item.description}
                 </li>
               ))}
@@ -54,11 +56,11 @@ const SectionCoreWrapper = styled.section`
     width: 100%;
     height: 100%;
     padding-left: 7rem;
-    padding-top: 7rem;
+    padding-top: 2rem;
   }
 
   .list-content {
-    width: 85%;
+    width: 100%;
   }
 
   .list-title {
@@ -70,8 +72,24 @@ const SectionCoreWrapper = styled.section`
   }
 
   .list-content-item {
+    width: 100%;
+    height: 9rem;
     font-size: 2.5rem;
     padding: 1rem 0;
+    display: flex;
+    align-items: center;
+
+    .icon-container {
+      width: 8rem;
+      height: 8rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
   }
 
   .circle {
@@ -107,6 +125,7 @@ const SectionCoreWrapper = styled.section`
     .list {
       padding: 0;
       margin-bottom: 3rem;
+      margin-left: 1rem;
     }
 
     .list-title {
@@ -117,7 +136,17 @@ const SectionCoreWrapper = styled.section`
     .list-content {
       margin: 0 auto;
       li {
-        text-align: center;
+        text-align: start;
+        font-size: 2rem;
+      }
+    }
+
+    .list-content-item {
+      height: 6rem;
+      .icon-container {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 1.3rem;
       }
     }
 

@@ -1,23 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 
-const icon1 = require("../../images/icons/woman.svg")
-const icon2 = require("../../images/icons/student.svg")
-
 interface IContactCardProps {
   name: string
   email: string
-  fluid: any
+  src: string
 }
 
-const ContactCard: React.FC<IContactCardProps> = ({ name, email, fluid }) => {
-  // To replace when photos are available
-  const icons = [icon1, icon2]
-
+const ContactCard: React.FC<IContactCardProps> = ({ name, email, src }) => {
   return (
     <ContactCardWrapper>
       <div className="top mb-1">
-        <img src={icons[Math.floor(Math.random() * 2)]} alt="contact" />
+        <img src={src} alt="contact" />
       </div>
       <div className="bottom">
         <h4 className="mb-2">{name}</h4>

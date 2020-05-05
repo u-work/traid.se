@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Fade } from "react-reveal"
 
-import ContactCard from "../../ContactCard/ContactCard"
+import ContactCard from "./ContactCard"
 
 import { title } from "../../../styles/theme"
 
@@ -20,7 +20,7 @@ const SectionContact = ({ data }) => {
               <ContactCard
                 name={member.name}
                 email={member.email}
-                fluid={member.image.childImageSharp.fluid}
+                src={member.image.childImageSharp.fixed.src}
               />
             </Fade>
           ))}
