@@ -1,8 +1,5 @@
-import React from "./node_modules/react"
-import styled from "./node_modules/styled-components"
-
-const icon1 = require("../../images/icons/woman.svg")
-const icon2 = require("../../images/icons/student.svg")
+import React from "react"
+import styled from "styled-components"
 
 interface IContactCardProps {
   name: string
@@ -11,13 +8,10 @@ interface IContactCardProps {
 }
 
 const ContactCard: React.FC<IContactCardProps> = ({ name, email, imgUrl }) => {
-  // To replace when photos are available
-  const icons = [icon1, icon2]
-
   return (
     <ContactCardWrapper>
       <div className="top mb-1">
-        <img src={icons[Math.floor(Math.random() * 2)]} alt="contact" />
+        <img src={imgUrl} alt="contact" />
       </div>
       <div className="bottom">
         <h4 className="mb-2">{name}</h4>
@@ -44,6 +38,7 @@ const ContactCardWrapper = styled.div`
       height: 100%;
       object-fit: contain;
       object-position: center;
+      border-radius: 50%;
     }
   }
 
