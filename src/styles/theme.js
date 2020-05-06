@@ -1,14 +1,14 @@
-import { css } from "styled-components"
+import { css } from 'styled-components';
 
 export const theme = {
-  primaryColor: "#d66464",
-  secondaryColor: "#006498",
-  textPrimary: "#666",
+  primaryColor: '#d66464',
+  secondaryColor: '#006498',
+  textPrimary: '#666',
 
   // Breakpoints
-  tabletWidth: "900px",
-  mobileWidth: "600px",
-}
+  tabletWidth: '900px',
+  mobileWidth: '600px',
+};
 
 export const title = css`
   text-align: center;
@@ -16,4 +16,4 @@ export const title = css`
   font-weight: 700;
   letter-spacing: 2px;
   word-spacing: 3px;
-`
+`;

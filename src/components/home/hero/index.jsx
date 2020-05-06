@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
+import React from 'react';
+import styled from 'styled-components';
+import BackgroundImage from 'gatsby-background-image';
 
 const Hero = ({ data }) => {
   const { frontmatter, html } = data;
@@ -22,8 +22,8 @@ const Hero = ({ data }) => {
         </BannerWrapper>
       </BackgroundImage>
     </HeroWrapper>
-  )
-}
+  );
+};
 
 const HeroWrapper = styled.section`
   height: 80rem;
@@ -40,7 +40,7 @@ const HeroWrapper = styled.section`
   @media (max-width: ${props => props.theme.mobileWidth}) {
     height: 60rem;
   }
-`
+`;
 
 const BannerWrapper = styled.div`
   height: 100%;
@@ -79,6 +79,6 @@ const BannerWrapper = styled.div`
       font-size: 4rem;
     }
   }
-`
+`;
 
-export default Hero
+export default Hero;

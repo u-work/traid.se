@@ -1,10 +1,10 @@
-import React from "react"
-import Image from "gatsby-image"
-import styled from "styled-components"
-import { Fade } from "react-reveal"
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'gatsby-image';
+import { Fade } from 'react-reveal';
 
 const SectionCore = ({ data }) => {
-  const { frontmatter } = data
+  const { frontmatter } = data;
   return (
     <SectionCoreWrapper>
       <div className="content">
@@ -12,10 +12,13 @@ const SectionCore = ({ data }) => {
           <div className="list">
             <h4 className="list-title">{frontmatter.title}</h4>
             <ul className="list-content">
-              {frontmatter.content.map((item, index) => (
-                <li key={index} className="list-content-item">
+              {frontmatter.content.map(item => (
+                <li key={item.title} className="list-content-item">
                   <div className="icon-container">
-                    <img src={item.icon} alt={item.title} />
+                    <img
+                      src={item.icon.childImageSharp.fixed.src}
+                      alt={item.title}
+                    />
                   </div>
                   {item.description}
                 </li>
@@ -25,17 +28,14 @@ const SectionCore = ({ data }) => {
         </Fade>
         <Fade right>
           <div className="circle">
-            <img
-              src={frontmatter.childImageSharp.fixed.src}
-              alt="core-features-circle"
-            />
+            <Image fluid={frontmatter.image.childImageSharp.fluid} />
             <p className="circle-label">{frontmatter.circleCaption}</p>
           </div>
         </Fade>
       </div>
     </SectionCoreWrapper>
-  )
-}
+  );
+};
 
 const SectionCoreWrapper = styled.section`
   width: 100%;
@@ -80,8 +80,10 @@ const SectionCoreWrapper = styled.section`
     align-items: center;
 
     .icon-container {
-      width: 8rem;
-      height: 8rem;
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
 
       img {
         width: 100%;
@@ -96,8 +98,9 @@ const SectionCoreWrapper = styled.section`
     width: 100%;
     height: 100%;
 
-    img {
-      width: 100%;
+    .gatsby-image-wrapper {
+      margin: 0 auto;
+      width: 40rem;
       height: 40rem;
       object-fit: contain;
       object-position: center;
@@ -154,6 +157,6 @@ const SectionCoreWrapper = styled.section`
       font-size: 2.5rem;
     }
   }
-`
+`;
 
-export default SectionCore
+export default SectionCore;

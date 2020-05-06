@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
-import Image from "gatsby-image"
-import { Fade } from "react-reveal"
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'gatsby-image';
+import { Fade } from 'react-reveal';
 
-import { title } from "../../../styles/theme"
+import { title } from '../../../styles/theme';
 
 const SectionAbout = ({ data }) => {
-  const { frontmatter, html } = data
+  const { frontmatter, html } = data;
 
   return (
     <SectionAboutWrapper>
@@ -18,7 +18,7 @@ const SectionAbout = ({ data }) => {
               <div
                 className="description-content"
                 dangerouslySetInnerHTML={{ __html: html }}
-              ></div>
+              />
             </div>
             <div className="image-container">
               <Image
@@ -30,8 +30,8 @@ const SectionAbout = ({ data }) => {
         </div>
       </Fade>
     </SectionAboutWrapper>
-  )
-}
+  );
+};
 
 const SectionAboutWrapper = styled.section`
   width: 100%;
@@ -114,6 +114,6 @@ const SectionAboutWrapper = styled.section`
       }
 
   }
-`
+`;
 
-export default SectionAbout
+export default SectionAbout;

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "u-work",
-    author: "laurent tram",
+    title: 'u-work',
+    author: 'laurent tram',
   },
   plugins: [
     {
@@ -51,5 +51,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-playground`,
+    `gatsby-plugin-netlify-cms`,
   ],
-}
+};

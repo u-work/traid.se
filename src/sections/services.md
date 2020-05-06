@@ -8,5 +8,5 @@ services:
     icon: /img/icons/business-and-finance.svg
   - title: Ge
     description: Därför har staden dragit igång en expressutbildning som löper under en vecka. Den äger rum på Campus Åsö på Södermalm, ett kommunalt vuxengymnasium.
-    icon: /img/icons/prize.svg
+    icon: /img/icons/hand.svg
 ---

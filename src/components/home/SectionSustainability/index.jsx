@@ -1,29 +1,26 @@
-import React from "react"
-import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
+import React from 'react';
+import styled from 'styled-components';
+import BackgroundImage from 'gatsby-background-image';
 
-import { title } from "../../../styles/theme"
+import { title } from '../../../styles/theme';
 
 const SectionSustainability = ({ data }) => {
-  const { html, frontmatter } = data
+  const { html, frontmatter } = data;
   return (
     <SectionWrapper>
       <h3 className="title">{frontmatter.title}</h3>
       <BackgroundImage
         fluid={frontmatter.bgImage.childImageSharp.fluid}
-        style={{ position: "relative" }}
+        style={{ position: 'relative' }}
       >
-        <div className="overlay"></div>
+        <div className="overlay" />
         <div className="container">
-          <div
-            className="content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          ></div>
+          <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </BackgroundImage>
     </SectionWrapper>
-  )
-}
+  );
+};
 
 const SectionWrapper = styled.section`
   .container {
@@ -68,6 +65,6 @@ const SectionWrapper = styled.section`
       padding: 1rem;
     }
   }
-`
+`;
 
-export default SectionSustainability
+export default SectionSustainability;

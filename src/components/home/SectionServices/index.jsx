@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
-import ServiceCard from "./ServiceCard"
+import ServiceCard from './ServiceCard';
 
 const SectionServices = ({ data }) => {
   const {
     frontmatter: { services },
-  } = data
+  } = data;
 
   return (
     <SectionServicesWrapper>
@@ -16,14 +16,14 @@ const SectionServices = ({ data }) => {
             key={service.name}
             title={service.name}
             desc={service.description}
-            image={service.icon}
+            image={service.icon.publicURL}
             delay={index * 150}
           />
         ))}
       </div>
     </SectionServicesWrapper>
-  )
-}
+  );
+};
 
 const SectionServicesWrapper = styled.section`
   margin: 5rem 0;
@@ -41,6 +41,6 @@ const SectionServicesWrapper = styled.section`
       align-items: center;
     }
   }
-`
+`;
 
-export default SectionServices
+export default SectionServices;

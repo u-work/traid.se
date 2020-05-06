@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "react-scroll"
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   return (
     <NavbarWrapper>
       <div className="row">
@@ -12,8 +12,8 @@ const Navbar: React.FC = () => {
         <div className="nav">
           <Link
             to="sectionServices"
-            spy={true}
-            smooth={true}
+            spy
+            smooth
             offset={-40}
             duration={500}
             className="navLink"
@@ -22,8 +22,8 @@ const Navbar: React.FC = () => {
           </Link>
           <Link
             to="sectionSustainability"
-            spy={true}
-            smooth={true}
+            spy
+            smooth
             offset={-80}
             duration={500}
             className="navLink"
@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
           </Link>
           <Link
             to="sectionAbout"
-            spy={true}
-            smooth={true}
+            spy
+            smooth
             offset={-40}
             duration={500}
             className="navLink"
@@ -42,8 +42,8 @@ const Navbar: React.FC = () => {
           </Link>
           <Link
             to="sectionContact"
-            spy={true}
-            smooth={true}
+            spy
+            smooth
             offset={-40}
             duration={500}
             className="navLink"
@@ -53,8 +53,8 @@ const Navbar: React.FC = () => {
         </div>
       </div>
     </NavbarWrapper>
-  )
-}
+  );
+};
 
 const NavbarWrapper = styled.nav`
   position: sticky;
@@ -105,6 +105,6 @@ const NavbarWrapper = styled.nav`
       display: none;
     }
   }
-`
+`;
 
-export default Navbar
+export default Navbar;

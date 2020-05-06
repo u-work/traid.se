@@ -1,36 +1,37 @@
-import React from "react"
-import styled from "styled-components"
-import { Fade } from "react-reveal"
+import React from 'react';
+import styled from 'styled-components';
+import { Fade } from 'react-reveal';
 
-import ContactCard from "./ContactCard"
+import ContactCard from './ContactCard';
 
-import { title } from "../../../styles/theme"
+import { title } from '../../../styles/theme';
 
 const SectionContact = ({ data }) => {
-  const { frontmatter } = data
+  const { frontmatter } = data;
   return (
-    <SectionContackWrapper>
+    <SectionContactWrapper>
       <div className="container">
         <Fade>
           <h3 className="mb-3">{frontmatter.data}</h3>
         </Fade>
         <div className="content">
           {frontmatter.team.map((member, index) => (
-            <Fade key={index} bottom delay={(index + 1) * 100}>
+            <Fade key={member.name} bottom delay={(index + 1) * 100}>
               <ContactCard
                 name={member.name}
                 email={member.email}
-                src={member.image.childImageSharp.fixed.src}
+                image={member.image.childImageSharp.fluid}
+                position={member.position}
               />
             </Fade>
           ))}
         </div>
       </div>
-    </SectionContackWrapper>
-  )
-}
+    </SectionContactWrapper>
+  );
+};
 
-const SectionContackWrapper = styled.section`
+const SectionContactWrapper = styled.section`
   width: 100%;
   min-height: 40rem;
   padding: 4rem 0;
@@ -61,6 +62,6 @@ const SectionContackWrapper = styled.section`
       }
     
   }
-`
+`;
 
-export default SectionContact
+export default SectionContact;

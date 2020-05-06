@@ -1,25 +1,21 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'gatsby-image';
 
-interface IContactCardProps {
-  name: string
-  email: string
-  src: string
-}
-
-const ContactCard: React.FC<IContactCardProps> = ({ name, email, src }) => {
+const ContactCard = ({ name, email, image, position }) => {
   return (
     <ContactCardWrapper>
       <div className="top mb-1">
-        <img src={src} alt="contact" />
+        <Image fluid={image} />
       </div>
       <div className="bottom">
-        <h4 className="mb-2">{name}</h4>
+        <h4 className="member-name">{name}</h4>
+        <h5 className="mb-2">{position}</h5>
         <p>{email}</p>
       </div>
     </ContactCardWrapper>
-  )
-}
+  );
+};
 
 const ContactCardWrapper = styled.div`
   width: 20rem;
@@ -38,7 +34,12 @@ const ContactCardWrapper = styled.div`
       height: 100%;
       object-fit: contain;
       object-position: center;
+      border-radius: 50%;
     }
+  }
+
+  .member-name {
+    margin-bottom: 0.5rem;
   }
 
   .bottom {
@@ -67,6 +68,6 @@ const ContactCardWrapper = styled.div`
       }
     }
   }
-`
+`;
 
-export default ContactCard
+export default ContactCard;

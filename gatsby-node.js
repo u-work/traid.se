@@ -36,11 +36,11 @@ exports.createPages = ({ actions, graphql }) => {
       let pathName;
       if (edge.node.frontmatter.templateKey === 'index-page') {
         pathName = '/';
-        component = path.resolve(`src/templates/index-page.js`);
+        component = path.resolve(`src/templates/index-page.jsx`);
       } else {
         pathName = edge.node.frontmatter.path || edge.node.fields.slug;
         component = path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.jsx`,
         );
       }
       const { id } = edge.node;

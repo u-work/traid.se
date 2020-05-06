@@ -1,20 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Fade } from "react-reveal"
+import React from 'react';
+import styled from 'styled-components';
+import { Fade } from 'react-reveal';
 
-interface IServiceCardProps {
-  image: string
-  title: string
-  desc: string
-  delay: number
-}
-
-const ServiceCard: React.FC<IServiceCardProps> = ({
-  image,
-  title,
-  desc,
-  delay,
-}) => {
+const ServiceCard = ({ image, title, desc, delay }) => {
   return (
     <ServiceCardWrapper>
       <div className="top">
@@ -27,8 +15,8 @@ const ServiceCard: React.FC<IServiceCardProps> = ({
         </div>
       </Fade>
     </ServiceCardWrapper>
-  )
-}
+  );
+};
 
 const ServiceCardWrapper = styled.div`
   min-width: 30rem;
@@ -92,6 +80,6 @@ const ServiceCardWrapper = styled.div`
       }
     }
   }
-`
+`;
 
-export default ServiceCard
+export default ServiceCard;

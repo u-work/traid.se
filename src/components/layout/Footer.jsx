@@ -1,17 +1,17 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <FooterWrapper>
       <div className="container">
-        <p style={{ fontSize: "4rem", color: "#fff", textAlign: "center" }}>
+        <p style={{ fontSize: '4rem', color: '#fff', textAlign: 'center' }}>
           TRAID
         </p>
 
         <FormWrapper
-          onSubmit={(e: React.ChangeEvent<HTMLFormElement>) => {
-            e.preventDefault()
+          onSubmit={e => {
+            e.preventDefault();
           }}
         >
           <div className="form-group">
@@ -28,8 +28,8 @@ const Footer: React.FC = () => {
         </FormWrapper>
       </div>
     </FooterWrapper>
-  )
-}
+  );
+};
 
 const FooterWrapper = styled.footer`
   width: 100%;
@@ -49,7 +49,7 @@ const FooterWrapper = styled.footer`
       flex-direction: column;
     }
   }
-`
+`;
 
 const FormWrapper = styled.form`
   display: flex;
@@ -102,6 +102,6 @@ const FormWrapper = styled.form`
   @media (max-width: ${props => props.theme.mobileWidth}) {
     margin: auto;
   }
-`
+`;
 
-export default Footer
+export default Footer;
