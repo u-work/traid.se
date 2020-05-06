@@ -1,0 +1,113 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "sections"
+    label: "Sections"
+    files:
+      - file: "src/sections/hero.md"
+        label: Hero (header image)
+        name: hero
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Background image
+            name: bgImage
+            widget: image
+          - label: Subtitle
+            name: body
+            widget: markdown
+      - file: "src/sections/services.md"
+        label: Services
+        name: services
+        fields:
+          - label: Services
+            name: services
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Icon
+                name: icon
+                widget: image
+              - label: Description
+                name: description
+                widget: string
+      - file: "src/sections/sustainability.md"
+        label: Sustainability
+        name: sustainability
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Background image
+            name: bgImage
+            widget: image
+          - label: Content
+            name: body
+            widget: markdown
+      - file: "src/sections/core.md"
+        label: "Core"
+        name: core
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Core circle image
+            name: image
+            widget: image
+          - label: Circle image caption
+            name: circleCaption
+            widget: string
+          - label: Content
+            name: content
+            widget: list
+            fields:
+              - label: Description
+                name: description
+                widget: string
+              - label: Icon
+                name: icon
+                widget: image
+      - file: "src/sections/about.md"
+        label: "About"
+        name: about
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Content
+            name: body
+            widget: markdown
+      - file: "src/sections/contact.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Team member"
+            name: "team"
+            widget: list
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Position"
+                name: "position"
+                widget: "string"
+              - label: "E-mail"
+                name: email
+                widget: string
+              - label: "Image"
+                name: image
+                widget: image

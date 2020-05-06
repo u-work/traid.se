@@ -1,35 +1,46 @@
 module.exports = {
   siteMetadata: {
-    title: "u-work",
-    author: "laurent tram",
+    title: 'u-work',
+    author: 'laurent tram',
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/img`,
+        name: 'images',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/components`,
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/sections`,
+        name: 'sections',
       },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: 'images',
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 500,
               linkImagesToOriginal: false,
               showCaptions: false,
-              wrapperStyle: "margin: 0;",
             },
           },
         ],
@@ -40,5 +51,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-playground`,
+    `gatsby-plugin-netlify-cms`,
   ],
-}
+};

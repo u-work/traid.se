@@ -1,0 +1,22 @@
+extends:
+  - airbnb
+  - prettier
+plugins:
+  - prettier
+parserOptions:
+  ecmaVersion: 9
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+settings:
+  import/resolver:
+    node:
+      extensions: [".js", ".jsx"]
+rules:
+  prettier/prettier:
+    - error
+  import/prefer-default-export: "off"
+  react/jsx-one-expression-per-line: "off"
+  react/no-danger: "off"
+env:
+  jest: true
