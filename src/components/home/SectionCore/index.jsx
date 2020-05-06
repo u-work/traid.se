@@ -120,6 +120,14 @@ const SectionCoreWrapper = styled.section`
   @media (max-width: ${props => props.theme.mobileWidth}) {
     height: 100%;
 
+    .circle {
+      .gatsby-image-wrapper {
+        margin: 2rem;
+        width: auto;
+        height: auto;
+      }
+    }
+
     .content {
       flex-direction: column;
       align-items: center;
@@ -147,9 +155,10 @@ const SectionCoreWrapper = styled.section`
     .list-content-item {
       height: 6rem;
       .icon-container {
-        width: 6rem;
-        height: 6rem;
+        width: 3rem;
+        height: 3rem;
         margin-right: 1.3rem;
+        margin-left: 1.3rem;
       }
     }
 
