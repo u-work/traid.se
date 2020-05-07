@@ -11,7 +11,11 @@ const ServiceCard = ({ image, title, desc, delay }) => {
       <Fade bottom fraction={0.4} delay={delay}>
         <div className="bottom">
           <h3 className="title">{title}</h3>
-          <p className="desc">{desc}</p>
+          <ul className="desc">
+            {desc.map(description => (
+              <li>{description}</li>
+            ))}
+          </ul>
         </div>
       </Fade>
     </ServiceCardWrapper>
@@ -29,7 +33,6 @@ const ServiceCardWrapper = styled.div`
     height: 40%;
     width: 100%;
     padding: 3rem;
-    padding-left: 5rem;
 
     img {
       width: 100%;
@@ -55,10 +58,16 @@ const ServiceCardWrapper = styled.div`
     }
 
     .desc {
+      margin-left: 4.5rem;
       font-size: 1.6rem;
       font-weight: 400;
       color: ${props => props.theme.textPrimary};
-      padding-left: 3rem;
+      line-height: 2.5rem;
+      
+      li {
+        margin-bottom: 1.5rem;
+        list-style: outside;
+      }
     }
   }
   @media (max-width: ${props => props.theme.tabletWidth}) {
@@ -67,7 +76,6 @@ const ServiceCardWrapper = styled.div`
 
   @media (max-width: ${props => props.theme.mobileWidth}) {
     height: 10rem;
-    margin-bottom: 4rem;
     .top {
       padding: 2rem;
       padding-left: 3rem;
@@ -77,6 +85,11 @@ const ServiceCardWrapper = styled.div`
       .desc {
         padding: 0;
         text-align: center;
+        margin-left: 0;
+        font-size: 1.2rem;
+        li {
+          list-style: none;
+        }
       }
     }
   }

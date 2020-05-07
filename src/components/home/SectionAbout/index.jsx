@@ -96,6 +96,9 @@ const SectionAboutWrapper = styled.section`
   }
 
   @media (max-width: ${props => props.theme.mobileWidth}) {
+    h3 {
+      font-size: 2rem;
+    }
       .mb-3 {
         margin-bottom: 2rem;
       }
@@ -104,8 +107,8 @@ const SectionAboutWrapper = styled.section`
         flex-direction: column;
         -ms-flex-direction: column;
         align-items: center;
-
-
+        font-size: 1.2rem;
+        padding: 2rem;
 
         .left {
           padding: 2rem 2rem;

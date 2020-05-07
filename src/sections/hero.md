@@ -1,5 +1,6 @@
 ---
 title: Vad kan vi ge?
-bgImage: /img/give-flower.jpg
+bgImage: /img/tobias-tullius-RhjVGxILcqE-unsplash.jpg
 ---
-Traid är en cirkular handelsplats, tillsammans står upp for framtiden.
+Traid är en cirkulär handelsplats
+Tillsammans står vi upp för framtiden.

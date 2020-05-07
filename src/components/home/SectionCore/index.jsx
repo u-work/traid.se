@@ -122,7 +122,7 @@ const SectionCoreWrapper = styled.section`
 
     .circle {
       .gatsby-image-wrapper {
-        margin: 2rem;
+        margin: 2rem 3rem;
         width: auto;
         height: auto;
       }
@@ -142,13 +142,15 @@ const SectionCoreWrapper = styled.section`
     .list-title {
       text-align: center;
       margin-left: 0rem;
+      font-size: 2rem;
     }
 
     .list-content {
       margin: 0 auto;
+      padding-left: 2rem;
       li {
         text-align: start;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
 
@@ -157,7 +159,7 @@ const SectionCoreWrapper = styled.section`
       .icon-container {
         width: 3rem;
         height: 3rem;
-        margin-right: 1.3rem;
+        margin-right: 2.7rem;
         margin-left: 1.3rem;
       }
     }

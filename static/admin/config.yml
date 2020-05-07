@@ -38,7 +38,7 @@ collections:
                 widget: image
               - label: Description
                 name: description
-                widget: string
+                widget: hidden
       - file: "src/sections/sustainability.md"
         label: Sustainability
         name: sustainability

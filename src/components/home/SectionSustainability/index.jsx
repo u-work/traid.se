@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import BackgroundImage from 'gatsby-background-image';
+// import BackgroundImage from 'gatsby-background-image';
+import Image from 'gatsby-image';
+import { Parallax, Background } from 'react-parallax';
 
 import { title } from '../../../styles/theme';
 
@@ -9,15 +11,16 @@ const SectionSustainability = ({ data }) => {
   return (
     <SectionWrapper>
       <h3 className="title">{frontmatter.title}</h3>
-      <BackgroundImage
-        fluid={frontmatter.bgImage.childImageSharp.fluid}
-        style={{ position: 'relative' }}
+      <div className="overlay" />
+      <Parallax
+        strength={500}
+        blur={{ min: -15, max: 15 }}
+        bgImage={frontmatter.bgImage.childImageSharp.fluid.src}
       >
-        <div className="overlay" />
         <div className="container">
           <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
-      </BackgroundImage>
+      </Parallax>
     </SectionWrapper>
   );
 };
@@ -63,6 +66,11 @@ const SectionWrapper = styled.section`
   @media (max-width: ${props => props.theme.mobileWidth}) {
     .content {
       padding: 1rem;
+      font-size: 1.2rem;
+    }
+    .title {
+      padding: 0 3rem;
+      font-size: 2rem;
     }
   }
 `;
