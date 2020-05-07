@@ -5,10 +5,9 @@ services:
       annonsens pris skänks direkt till välgörande ändamål.
     icon: /img/icons/commerce-and-shopping.svg
   - title: Sälj
-    description: "Som registrerad användare kan du enkelt och utan kostnad annonsera
-      på Traid marknaden. Du betalar endast om annonsen säljs och minst 10% av
-      din försäljning måste skänkas till ett stödområde. Du får såklart välja
-      vilket stödområde du vill stödja. "
+    description: Annonsera enkelt och kostnadsfritt på Traid. Du betalar endast för
+      annonsen om den säljs, minst 10% av din försäljning skänks till valfritt
+      stödområde.
     icon: /img/icons/business-and-finance.svg
   - title: Ge
     description: "Vill du hellre skänka dina pryar? Då är det helt gratis att
