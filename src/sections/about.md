@@ -18,9 +18,7 @@ Vår filosofi  bygger på konceptet ’effektiv altruism’, som handlar om att 
 
 **"Rädda klimatet, hjälpa människor och ta ställning i en utmanande tid".** 
 
-
-
-### Vår policy genomsyras av transparens tillsammans med er!
+### Vår policy genomsyras av transparens och utvecklingen gör vi bäst tillsammans med er!
 
 Det har tyvärr blivit alltför vanligt med fusk inom bistånd. Det hör till vardagen att välgörande verksamheter utnyttjas och att individer endast maskerar sig med goda intentioner. Därför har vi valt helhjärtat valt transparens gentemot våra användare och samarbetspartners. Vi värdesätter även god kommunikation och livslånga samarbeten med våra partners och användare, så att även vi kan vara så effektiva som vi bara kan vara. 
 
@@ -32,5 +30,17 @@ Våra huvudkriterier för få stöd och pengar är:
 * Mätbarhet - Det ska gå att utvärdera effekten och slutresultatet från insatsen. 
 
 
+
+<!--StartFragment-->
+
+##### Är du rätt investerare för Traid?
+
+Mejla gärna intresse till: erik@traid.se
+
+Vi är säkra på att konceptet kommer revolutionera bemötandet av vår tids största överhängande problematik.
+
+Följ oss i jakten på det hållbara samhället!
+
+Men vi måste börja nu!
 
 <!--EndFragment-->
