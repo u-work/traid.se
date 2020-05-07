@@ -4,6 +4,7 @@ image: /img/protest.jpg
 ---
 ### Vi är Traid och det här är vår filosofi.
 
+
 <!--StartFragment-->
 
 Traid Sweden AB grundades 2019 med ett gemensamt mål och en enad vision: 
@@ -28,8 +29,9 @@ Enstaka projekt, ideella verksamheter och andra icke vinstdrivna organisationer.
 
 ##### **Våra huvudkriterier för få stöd och pengar är:**
 
-* Rätt typ av aktivitet - Aktiviteter ska utgå från relevant forskning och / eller särskild kunskap inom området. 
-* Mätbarhet - Det ska gå att utvärdera effekten och slutresultatet från insatsen. 
+Rätt typ av aktivitet - Aktiviteter ska utgå från relevant forskning och / eller särskild kunskap inom området. 
+
+Mätbarhet - Det ska gå att utvärdera effekten och slutresultatet från insatsen. 
 
 <!--StartFragment-->
 

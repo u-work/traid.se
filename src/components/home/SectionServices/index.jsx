@@ -13,8 +13,8 @@ const SectionServices = ({ data }) => {
       <div className="container row">
         {services.map((service, index) => (
           <ServiceCard
-            key={service.name}
-            title={service.name}
+            key={service.title}
+            title={service.title}
             desc={service.description}
             image={service.icon.publicURL}
             delay={index * 150}
