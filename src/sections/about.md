@@ -20,16 +20,16 @@ Vår filosofi  bygger på konceptet ’effektiv altruism’, som handlar om att 
 
 ### Vår policy genomsyras av transparens och utvecklingen gör vi bäst tillsammans med er!
 
-Det har tyvärr blivit alltför vanligt med fusk inom bistånd. Det hör till vardagen att välgörande verksamheter utnyttjas och att individer endast maskerar sig med goda intentioner. Därför har vi valt helhjärtat valt transparens gentemot våra användare och samarbetspartners. Vi värdesätter även god kommunikation och livslånga samarbeten med våra partners och användare, så att även vi kan vara så effektiva som vi bara kan vara. 
+Det har tyvärr blivit alltför vanligt med fusk inom välfärden och biståndet. Det hör till vardagen att välgörande verksamheter utnyttjas och att individer endast maskerar sig med goda intentioner. Därför har vi valt helhjärtat valt transparens gentemot våra användare och samarbetspartners. Vi värdesätter även god kommunikation och livslånga samarbeten med våra partners och användare, så att även vi kan vara så effektiva som vi bara kan vara. 
 
-Vi stödjer enstaka projekt, ideella verksamheter och även andra icke vinstdrivna organisationer och i vissa fall personer. 
+##### Vi stödjer: 
 
-Våra huvudkriterier för få stöd och pengar är:
+Enstaka projekt, ideella verksamheter och andra icke vinstdrivna organisationer.  I vissa fall även enstaka  personer. 
+
+##### **Våra huvudkriterier för få stöd och pengar är:**
 
 * Rätt typ av aktivitet - Aktiviteter ska utgå från relevant forskning och / eller särskild kunskap inom området. 
 * Mätbarhet - Det ska gå att utvärdera effekten och slutresultatet från insatsen. 
-
-
 
 <!--StartFragment-->
 
