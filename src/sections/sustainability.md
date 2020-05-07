@@ -4,8 +4,10 @@ bgImage: /img/clothing-store.jpg
 ---
 <!--StartFragment-->
 
-Vi vill skapa en bättre värld och skapa mervärde för alla. Traid är ett verktyg som gör det enkelt för dig att bli klimatsmartare och konsumera hållbart. Vår verksamhet bygger på att ge möjligheten och även skapa motivationen för att bidra till vår tids största utmaningar. De utmaningar vi syftar till är exempelvis: klimatförändringar, mänskliga rättigheter, jämställdighet, fattigdomsbekämpning och ekonomisk hållbarhet. 
+Vi vill skapa en bättre värld och skapa mervärde för alla. Traid är ett verktyg som gör det enkelt för dig att bli klimatsmartare och konsumera hållbart. Vår verksamhet bygger på att ge möjligheten och skapa motivationen till att bidra till vår tids största utmaningar. 
 
-Traid utvecklas tillsammans med våra användare under ett gemensamt mål: Hållbar utveckling.  Vi tror att lösningen finns i enkelheten. Det ska vara enkelt, smidigt och roligt att konsumera och handla hållbart. Tillsammans gör vi skillnad. 
+De utmaningar vi menar är exempelvis: klimatförändringar, mänskliga rättigheter, jämställdhet, fattigdomsbekämpning och ekonomisk hållbarhet. 
+
+Vi utvecklar Traid tillsammans med våra användare. Det är möjligt eftersom vi samlas och enas kring en gemensam agenda, för att lösa ett kollektivt uppdrag, nämligen: "att bana vägen för en hållbar utveckling". Vi är övertygade om att lösningen hittas gemenskapen och enkelheten. Tillsammans skapar vi en tjänst som är vänlig, rolig och nyttig att använda. Tillsammans gör vi riktig skillnad. 
 
 <!--EndFragment-->
