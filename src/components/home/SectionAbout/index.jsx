@@ -53,7 +53,6 @@ const SectionAboutWrapper = styled.section`
       width: 100%;
       height: 100%;
       padding: 1rem 15rem;
-      text-align: center;
 
       .description-content  {
         h4 {
