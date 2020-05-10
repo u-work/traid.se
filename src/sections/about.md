@@ -2,8 +2,6 @@
 title: Om Traid
 image: /img/protest.jpg
 ---
-### Filosofin bakom Traid.
-
 <!--StartFragment-->
 
 Traid Sweden AB grundades 2019 med ett gemensamt mål och en enad vision. **Det ska vara enkelt att bidra till en bättre värld.**
@@ -18,9 +16,9 @@ Det låter enkelt nog, men i vår filosofi så har vi funnit att **samhället id
 
 Det är vår förhoppning att Traid och dess tjänster ska kunna agera både som mekanism och incitament för att driva dessa frågor och lösningar vidare till både individ som företag, nu och in i framtiden.
 
-
-
 ## Vår policy
+
+
 
 På Traid genomsyras vår verksamhet av transparens och vi tror helhjärtat på att utveckling frodas bäst i gemenskap och solidaritet.
 
