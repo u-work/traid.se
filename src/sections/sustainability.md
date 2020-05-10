@@ -8,8 +8,6 @@ Vi vill skapa en bättre värld och skapa mervärde för alla. Traid är ett ver
 
 De utmaningar vi står inför är många: Bekämpa klimatförändringar och fattigdom. Stärka och upprätthålla idealen om mänskliga rättigheter, jämställdhet, och ekonomisk hållbarhet.
 
-
-
 Vi utvecklar Traid tillsammans med våra användare. Det är möjligt eftersom vi samlas och enas kring en gemensam agenda, för att lösa ett kollektivt uppdrag nämligen, "att bana väg för en hållbar utveckling". Vi är övertygade om att lösningen finns i gemenskapen och enkelheten. Tillsammans skapar vi en tjänst som är vänlig, rolig och nyttig att använda. Tillsammans gör vi riktig skillnad.
 
 <!--EndFragment-->
