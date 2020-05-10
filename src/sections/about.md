@@ -18,8 +18,6 @@ Det är vår förhoppning att Traid och dess tjänster ska kunna agera både som
 
 ## Vår policy
 
-
-
 På Traid genomsyras vår verksamhet av transparens och vi tror helhjärtat på att utveckling frodas bäst i gemenskap och solidaritet.
 
 Det har tyvärr blivit alltför vanligt med fusk inom välfärden och biståndet. Det hör till vardagen att välgörande verksamheter utnyttjas och att makthavare endast maskerar sig med goda intentioner. Därför har vi valt att arbeta obehindrat med transparens i alla våra beslut gentemot våra användare och samarbetspartners. I sann anda av hållbar utveckling så värdesätter vi den goda kommunikationen och det livslånga samarbetet med våra partners och användare, så att även vi kan vara så effektiva som vi alltid bör vara.
