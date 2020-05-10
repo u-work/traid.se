@@ -2,28 +2,31 @@
 title: Om Traid
 image: /img/protest.jpg
 ---
-### Vi är Traid och det här är vår filosofi.
-
+### Filosofin bakom Traid.
 
 <!--StartFragment-->
 
-Traid Sweden AB grundades 2019 med ett gemensamt mål och en enad vision: 
+Traid Sweden AB grundades 2019 med ett gemensamt mål och en enad vision. **Det ska vara enkelt att bidra till en bättre värld.**
 
-**"Det ska vara enkelt att bidra till en bättre värld".** 
+Vår filosofi bygger på konceptet **’effektiv altruism’**, som handlar om att hjälpa människor på bästa möjliga sätt utifrån bästa förmåga. Det är därför det så viktigt för oss att utveckla de rätta verktygen som på ett enkelt sätt möjliggör korrespondens mellanindividens bästa förmåga och största möjliga humanitära påverkan.
 
-Vi listade alla problem knutet till påståendet, varför var det inte enkelt? Vi kom fram till svaret att: 
+Det går inte att understryka hur viktig varje individuell insats är när det gäller att:
 
-**"Samhället idag saknar de rätta mekanismerna, förutsättningarna och incitamenten för att det ska vara enkelt att ställa upp och bidra".** 
+**Skapa långsiktiga klimatlösningar, stärka mänskliga rättigheter och utmana det globala samhällets många orättvisor.**
 
-Vår filosofi  bygger på konceptet ’effektiv altruism’, som handlar om att hjälpa människor på bästa möjliga sätt utifrån bästa förmåga. Därför är det viktigt att ge människor chansen att ge så mycket de kan och vill. Det går inte att understryka hur viktig varje insats är när det gäller: 
+Det låter enkelt nog, men i vår filosofi så har vi funnit att **samhället idag saknar de rätta mekanismerna, förutsättningarna och incitamenten för att det ska vara enkelt att ställa upp och bidra.**
 
-**"Rädda klimatet, hjälpa människor och ta ställning i en utmanande tid".** 
+Det är vår förhoppning att Traid och dess tjänster ska kunna agera både som mekanism och incitament för att driva dessa frågor och lösningar vidare till både individ som företag, nu och in i framtiden.
 
-### Vår policy genomsyras av transparens och utvecklingen gör vi bäst tillsammans med er!
 
-Det har tyvärr blivit alltför vanligt med fusk inom välfärden och biståndet. Det hör till vardagen att välgörande verksamheter utnyttjas och att individer endast maskerar sig med goda intentioner. Därför har vi valt helhjärtat valt transparens gentemot våra användare och samarbetspartners. Vi värdesätter även god kommunikation och livslånga samarbeten med våra partners och användare, så att även vi kan vara så effektiva som vi bara kan vara. 
 
-##### Vi stödjer: 
+## Vår policy
+
+På Traid genomsyras vår verksamhet av transparens och vi tror helhjärtat på att utveckling frodas bäst i gemenskap och solidaritet.
+
+Det har tyvärr blivit alltför vanligt med fusk inom välfärden och biståndet. Det hör till vardagen att välgörande verksamheter utnyttjas och att makthavare endast maskerar sig med goda intentioner. Därför har vi valt att arbeta obehindrat med transparens i alla våra beslut gentemot våra användare och samarbetspartners. I sann anda av hållbar utveckling så värdesätter vi den goda kommunikationen och det livslånga samarbetet med våra partners och användare, så att även vi kan vara så effektiva som vi alltid bör vara.
+
+##### Vi stödjer:
 
 Enstaka projekt, ideella verksamheter och andra icke vinstdrivna organisationer.  I vissa fall även enstaka  personer. 
 
@@ -43,6 +46,6 @@ Vi är säkra på att konceptet kommer revolutionera bemötandet av vår tids st
 
 Följ oss i jakten på det hållbara samhället!
 
-Men vi måste börja nu!
+Vi börjar nu!
 
 <!--EndFragment-->
