@@ -1,6 +1,6 @@
 ---
 title: Vår kärnverksamhet
-image: /img/image-40-1-.png
+image: /img/image-40-2-.png
 circleCaption: I en cirkulär handelsplats
 content:
   - description: Hållbara affärer
