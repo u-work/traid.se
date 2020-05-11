@@ -1,17 +1,18 @@
 ---
 templateKey: 'about-page'
-bgImage: '/img/give-flower.jpg'
-title: 'Om Traid'
+bgImage: '/img/Omoss.jpg'
+title: ''
+opacity: 1
 ---
-Traid Sweden AB grundades 2019 med ett gemensamt mål och en enad vision. **Det ska vara enkelt att bidra till en bättre värld.**
+Traid Sweden AB grundades 2019 med ett gemensamt mål och en enad vision. Det ska vara enkelt att bidra till en bättre värld.
 
 Vår filosofi bygger på konceptet **'effektiv altruism'**, som handlar om att hjälpa människor på bästa möjliga sätt utifrån bästa förmåga. Det är därför det så viktigt för oss att utveckla de rätta verktygen som på ett enkelt sätt möjliggör korrespondens mellan individens bästa förmåga och största möjliga humanitära påverkan.
 
 Det går inte att understryka hur viktig varje individuell insats är när det gäller att:
 
-**Skapa långsiktiga klimatlösningar, stärka mänskliga rättigheter och utmana det globala samhällets många orättvisor.**
+Skapa långsiktiga klimatlösningar, stärka mänskliga rättigheter och utmana det globala samhällets många orättvisor.
 
-Det låter enkelt nog, men i vår filosofi så har vi funnit att **samhället idag saknar de rätta mekanismerna, förutsättningarna och incitamenten för att det ska vara enkelt att bidra.**
+Det låter enkelt nog, men i vår filosofi så har vi funnit att samhället idag saknar de rätta mekanismerna, förutsättningarna och incitamenten för att det ska vara enkelt att bidra.
 
 Det är vår förhoppning att Traid och dess tjänster ska kunna agera både som mekanism och incitament för att driva dessa frågor och lösningar vidare till både individ som företag, nu och in i framtiden.
 

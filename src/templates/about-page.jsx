@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import Layout from '../components/layout/Layout';
 import Hero from '../components/home/hero';
 
@@ -12,17 +13,22 @@ const About = ({ data, path }) => {
   } = data;
 
   return (
-    <Layout path={path}>
-      <Hero data={{ frontmatter }} sidePage />
-      <AboutWrapper>
-        <div className="content">
-          <div
-            className="description"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </AboutWrapper>
-    </Layout>
+    <>
+      <Helmet>
+        <title>Om oss | Traid</title>
+      </Helmet>
+      <Layout path={path}>
+        <Hero data={{ frontmatter }} sidePage />
+        <AboutWrapper>
+          <div className="content">
+            <div
+              className="description"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
+        </AboutWrapper>
+      </Layout>
+    </>
   );
 };
 
@@ -41,6 +47,7 @@ export const query = graphql`
             }
           }
         }
+        opacity
       }
     }
   }

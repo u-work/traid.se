@@ -53,7 +53,17 @@ module.exports = {
           'https://traid.us8.list-manage.com/subscribe/post?u=540ad315ab6bed2db1a30ec9b&id=128ea3a655',
       },
     },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'UA-166123667-1',
+        },
+        environments: ['production', 'development'],
+      },
+    },
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

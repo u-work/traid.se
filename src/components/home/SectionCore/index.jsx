@@ -80,8 +80,8 @@ const SectionCoreWrapper = styled.section`
     align-items: center;
 
     .icon-container {
-      width: 3rem;
-      height: 3rem;
+      width: 4rem;
+      height: 4rem;
       margin-right: 1rem;
       margin-bottom: 0.5rem;
 

@@ -21,7 +21,8 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => { // eslint-disable-line
+  `).then(result => {
+    // eslint-disable-line
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString())); // eslint-disable-line
       return Promise.reject(result.errors);
@@ -39,7 +40,6 @@ exports.createPages = ({ actions, graphql }) => {
         component = path.resolve(`src/templates/index-page.jsx`);
       } else {
         pathName = edge.node.frontmatter.path || edge.node.fields.slug;
-        console.log(pathName);
         component = path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.jsx`,
         );

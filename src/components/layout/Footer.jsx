@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 
-const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+const emailRegex = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/;
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -45,7 +45,7 @@ const Footer = () => {
             type="submit"
             disabled={!emailRegex.test(email)}
           >
-            {submitted ? 'Tack!' : 'Skriv upp dig'}
+            {submitted ? 'Tack!' : 'Skicka'}
           </button>
         </FormWrapper>
       </div>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import { Element, Events, scrollSpy } from 'react-scroll';
 
 import Layout from '../components/layout/Layout';
@@ -30,22 +31,27 @@ const Index = ({ data, path }) => {
   }, []);
 
   return (
-    <Layout path={path}>
-      <Hero data={hero} />
-      <Element name="sectionServices">
-        <SectionServices data={services} />
-      </Element>
-      <Element name="sectionSustainability">
-        <SectionSustainability data={sustainability} />
-      </Element>
-      <SectionCore data={core} />
-      <Element name="sectionAbout">
-        <SectionAbout data={about} />
-      </Element>
-      <Element name="sectionContact">
-        <SectionContact data={contact} />
-      </Element>
-    </Layout>
+    <>
+      <Helmet>
+        <title>Traid</title>
+      </Helmet>
+      <Layout path={path}>
+        <Hero data={hero} />
+        <Element name="sectionServices">
+          <SectionServices data={services} />
+        </Element>
+        <Element name="sectionSustainability">
+          <SectionSustainability data={sustainability} />
+        </Element>
+        <SectionCore data={core} />
+        <Element name="sectionAbout">
+          <SectionAbout data={about} />
+        </Element>
+        <Element name="sectionContact">
+          <SectionContact data={contact} />
+        </Element>
+      </Layout>
+    </>
   );
 };
 
@@ -64,6 +70,7 @@ export const query = graphql`
             }
           }
         }
+        opacity
       }
     }
     services: markdownRemark(fields: { slug: { eq: "/services/" } }) {
@@ -99,7 +106,7 @@ export const query = graphql`
           description
           icon {
             childImageSharp {
-              fixed(width: 30) {
+              fixed(width: 40) {
                 src
               }
             }
@@ -126,6 +133,7 @@ export const query = graphql`
             }
           }
         }
+        linkText
       }
     }
     contact: markdownRemark(fields: { slug: { eq: "/contact/" } }) {

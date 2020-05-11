@@ -88,6 +88,9 @@ collections:
           - label: Content
             name: body
             widget: markdown
+          - label: Link Text
+            name: linkText
+            widget: string
       - file: "src/sections/contact.md"
         label: "Contact"
         name: "contact"
@@ -111,3 +114,22 @@ collections:
               - label: "Image"
                 name: image
                 widget: image
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: src/pages/about-us.md
+        label: About
+        name: about-us
+        fields:
+          - name: templateKey
+            label: templateKey
+            widget: hidden
+          - name: title
+            label: Title
+            widget: string
+          - name: bgImage
+            label: Hero Image
+            widget: image
+          - name: body
+            label: Page Content
+            widget: markdown

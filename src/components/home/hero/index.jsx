@@ -1,26 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
+import { Link } from 'react-scroll';
 
 const Hero = ({ data, sidePage = false }) => {
   const { frontmatter, html } = data;
 
   return (
-    <HeroWrapper sidePage={sidePage}>
+    <HeroWrapper sidePage={sidePage} opacity={frontmatter.opacity}>
       <BackgroundImage
         fluid={frontmatter.bgImage.childImageSharp.fluid}
         className="bcgImage"
-      >
-        <BannerWrapper>
-          <div className="content">
+        preserveStackingContext
+      />
+      <BannerWrapper>
+        <div className="content">
+          <Link to="sectionServices" spy smooth offset={-40} duration={500}>
             <h2 className="title">{frontmatter.title}</h2>
             <div
               className="subheader"
               dangerouslySetInnerHTML={{ __html: html }}
             />
-          </div>
-        </BannerWrapper>
-      </BackgroundImage>
+          </Link>
+        </div>
+      </BannerWrapper>
     </HeroWrapper>
   );
 };
@@ -28,17 +31,19 @@ const Hero = ({ data, sidePage = false }) => {
 const HeroWrapper = styled.section`
   height: ${props => (props.sidePage ? '40rem' : '80rem')};
   width: 100%;
+  position: relative;
 
   .bcgImage {
     width: 100%;
     height: 100%;
+    opacity: ${props => props.opacity};
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   @media (max-width: ${props => props.theme.mobileWidth}) {
-    height: 60rem;
+    height: ${props => (props.sidePage ? '20rem' : '60rem')};
   }
 `;
 
@@ -48,6 +53,9 @@ const BannerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: rgba(255, 255, 255, 0.2);
 
   .content {
@@ -59,14 +67,14 @@ const BannerWrapper = styled.div`
     font-size: 5rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: ${props => props.theme.primaryColor};
+    color: #dd5254;
   }
 
   .subheader {
     margin-top: 3rem;
 
     p {
-      color: #444;
+      color: #222;
       font-size: 2rem;
       font-weight: 400;
     }
@@ -76,7 +84,13 @@ const BannerWrapper = styled.div`
     padding: 2rem;
 
     .title {
-      font-size: 4rem;
+      font-size: 3rem;
+    }
+
+    .subheader {
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
 `;
