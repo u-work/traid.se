@@ -157,7 +157,7 @@ const NavbarWrapper = styled.nav`
       transition: transform 0.2s ease-out;
 
       .navLink {
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 600;
         color: #333;
       }
