@@ -10,5 +10,5 @@ content:
   - description: Reducera klimatpåverkan
     icon: /img/leaficon.png
   - description: Fina erbjudanden
-    icon: /img/prize-2-.png
+    icon: /img/prize-3-.png
 ---
