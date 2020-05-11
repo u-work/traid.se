@@ -7,11 +7,11 @@ import Footer from './Footer';
 import './layout.css';
 import { theme } from '../../styles/theme';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Navbar />
+        <Navbar path={path} />
         {children}
         <Footer />
       </ThemeProvider>

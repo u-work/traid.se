@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
-import { Link } from 'react-scroll';
+import { Link, scroller } from 'react-scroll';
 
-const Navbar = () => {
+const Navbar = ({ path }) => {
   return (
     <NavbarWrapper>
       <div className="row">
@@ -12,47 +12,60 @@ const Navbar = () => {
             <h4>TRAID</h4>
           </GatsbyLink>
         </div>
+
         <div className="nav">
-          <Link
-            to="sectionServices"
-            spy
-            smooth
-            offset={-40}
-            duration={500}
-            className="navLink"
-          >
-            Hur fungerar Traid
-          </Link>
-          <Link
-            to="sectionSustainability"
-            spy
-            smooth
-            offset={-80}
-            duration={500}
-            className="navLink"
-          >
-            Hållbarhet
-          </Link>
-          <Link
-            to="sectionAbout"
-            spy
-            smooth
-            offset={-40}
-            duration={500}
-            className="navLink"
-          >
-            Om Traid
-          </Link>
-          <Link
-            to="sectionContact"
-            spy
-            smooth
-            offset={-40}
-            duration={500}
-            className="navLink"
-          >
-            Kontakt
-          </Link>
+          {path === '/' ? (
+            <>
+              <Link
+                to="sectionServices"
+                spy
+                smooth
+                offset={-40}
+                duration={500}
+                className="navLink"
+              >
+                Hur fungerar Traid
+              </Link>
+              <Link
+                to="sectionSustainability"
+                spy
+                smooth
+                offset={-80}
+                duration={500}
+                className="navLink"
+              >
+                Hållbarhet
+              </Link>
+              <GatsbyLink to="/about-us" className="navLink">
+                Om Traid
+              </GatsbyLink>
+              <Link
+                to="sectionContact"
+                spy
+                smooth
+                offset={-40}
+                duration={500}
+                className="navLink"
+              >
+                Kontakt
+              </Link>
+            </>
+          ) : (
+            <>
+              <GatsbyLink to="/" className="navLink">
+                Hur fungerar Traid
+              </GatsbyLink>
+              <GatsbyLink to="/#sectionSustainability" className="navLink">
+                Hållbarhet
+              </GatsbyLink>
+              <GatsbyLink to="/about-us" className="navLink">
+                Om Traid
+              </GatsbyLink>
+              <GatsbyLink to="/#sectionContact" className="navLink">
+                Kontakt
+              </GatsbyLink>
+            </>
+          )}
         </div>
       </div>
     </NavbarWrapper>

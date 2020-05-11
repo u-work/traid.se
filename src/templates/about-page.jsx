@@ -6,13 +6,13 @@ import Hero from '../components/home/hero';
 
 import { title } from '../styles/theme';
 
-const About = ({ data }) => {
+const About = ({ data, path }) => {
   const {
     markdownRemark: { html, frontmatter },
   } = data;
 
   return (
-    <Layout>
+    <Layout path={path}>
       <Hero data={{ frontmatter }} sidePage />
       <AboutWrapper>
         <div className="content">

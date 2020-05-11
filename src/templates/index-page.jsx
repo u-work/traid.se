@@ -10,7 +10,7 @@ import SectionAbout from '../components/home/SectionAbout';
 import SectionContact from '../components/home/SectionContact';
 import SectionSustainability from '../components/home/SectionSustainability';
 
-const Index = ({ data }) => {
+const Index = ({ data, path }) => {
   const { hero, services, core, contact, about, sustainability } = data;
   useEffect(() => {
     Events.scrollEvent.register('begin', (...args) => {
@@ -30,7 +30,7 @@ const Index = ({ data }) => {
   }, []);
 
   return (
-    <Layout>
+    <Layout path={path}>
       <Hero data={hero} />
       <Element name="sectionServices">
         <SectionServices data={services} />
