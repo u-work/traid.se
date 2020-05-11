@@ -39,6 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
         component = path.resolve(`src/templates/index-page.jsx`);
       } else {
         pathName = edge.node.frontmatter.path || edge.node.fields.slug;
+        console.log(pathName);
         component = path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.jsx`,
         );

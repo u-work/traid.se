@@ -1,41 +1,52 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Image from 'gatsby-image';
-import { Fade } from 'react-reveal';
-import { Link } from 'gatsby';
+import Layout from '../components/layout/Layout';
+import Hero from '../components/home/hero';
 
-import { title } from '../../../styles/theme';
+import { title } from '../styles/theme';
 
-const SectionAbout = ({ data }) => {
-  const { frontmatter, html } = data;
+const About = ({ data }) => {
+  const {
+    markdownRemark: { html, frontmatter },
+  } = data;
 
   return (
-    <SectionAboutWrapper>
-      <Fade bottom fraction={0.1}>
-        <div className="container mb-2">
-          <h3 className="mb-2">{frontmatter.title}</h3>
-          <div className="content">
-            <div className="description">
-              <div
-                className="description-content"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
-              <Link to="/about-us">Läs mer om våra metoder och filosofi</Link>
-            </div>
-            <div className="image-container">
-              <Image
-                className="image"
-                fluid={frontmatter.image.childImageSharp.fluid}
-              />
-            </div>
-          </div>
+    <Layout>
+      <Hero data={{ frontmatter }} sidePage />
+      <AboutWrapper>
+        <div className="content">
+          <div
+            className="description"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </div>
-      </Fade>
-    </SectionAboutWrapper>
+      </AboutWrapper>
+    </Layout>
   );
 };
 
-const SectionAboutWrapper = styled.section`
+export default About;
+
+export const query = graphql`
+  query AboutPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+        bgImage {
+          childImageSharp {
+            fluid(maxWidth: 1980) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+const AboutWrapper = styled.section`
   width: 100%;
   min-height: 40rem;
   padding: 4rem 0;
@@ -119,5 +130,3 @@ const SectionAboutWrapper = styled.section`
 
   }
 `;
-
-export default SectionAbout;

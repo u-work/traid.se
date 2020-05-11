@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link as GatsbyLink } from 'gatsby';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
@@ -7,7 +8,9 @@ const Navbar = () => {
     <NavbarWrapper>
       <div className="row">
         <div className="logo">
-          <h4>TRAID</h4>
+          <GatsbyLink to="/">
+            <h4>TRAID</h4>
+          </GatsbyLink>
         </div>
         <div className="nav">
           <Link

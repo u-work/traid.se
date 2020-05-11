@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
+
+const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <FooterWrapper>
       <div className="container">
@@ -10,20 +16,36 @@ const Footer = () => {
         </p>
 
         <FormWrapper
-          onSubmit={e => {
+          onSubmit={async e => {
             e.preventDefault();
+            if (!emailRegex.test(email)) {
+              return;
+            }
+            setEmail('');
+            await addToMailchimp(email);
+            setSubmitted(true);
+            setTimeout(() => {
+              setSubmitted(false);
+            }, 3000);
           }}
         >
           <div className="form-group">
-            <label>Get our newsletter:</label>
+            <label htmlFor="email">Få vårt nyhetsbrev:</label>
             <input
               className="form-input"
+              name="email"
               type="text"
-              placeholder="Enter your email"
+              placeholder="Din emailadress"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
             />
           </div>
-          <button className="btn" type="submit">
-            Subscribe
+          <button
+            className="btn"
+            type="submit"
+            disabled={!emailRegex.test(email)}
+          >
+            {submitted ? 'Tack!' : 'Skriv upp dig'}
           </button>
         </FormWrapper>
       </div>
@@ -95,6 +117,13 @@ const FormWrapper = styled.form`
     }
 
     &:active {
+      transform: translateY(0px);
+    }
+
+    &:disabled,
+    &[disabled] {
+      color: #cccccc;
+      opacity: 1;
       transform: translateY(0px);
     }
   }

@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
-const Hero = ({ data }) => {
+const Hero = ({ data, sidePage = false }) => {
   const { frontmatter, html } = data;
 
   return (
-    <HeroWrapper>
+    <HeroWrapper sidePage={sidePage}>
       <BackgroundImage
         fluid={frontmatter.bgImage.childImageSharp.fluid}
         className="bcgImage"
@@ -26,7 +26,7 @@ const Hero = ({ data }) => {
 };
 
 const HeroWrapper = styled.section`
-  height: 80rem;
+  height: ${props => (props.sidePage ? '40rem' : '80rem')};
   width: 100%;
 
   .bcgImage {

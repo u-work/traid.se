@@ -46,6 +46,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+        endpoint:
+          'https://traid.us8.list-manage.com/subscribe/post?u=540ad315ab6bed2db1a30ec9b&id=128ea3a655',
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,

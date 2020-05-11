@@ -8,12 +8,12 @@ services:
   - title: Sälj
     description:
       - Annonsera enkelt och kostnadsfritt på Traid
-      - Du betalar endast för annonsen om den säljs 
+      - Administrativa avgifter tas enbart vid försäljning
       - Minst 10% av din försäljning skänks till valfritt stödområde
     icon: /img/icons/business-and-finance.svg
   - title: Ge
     description: 
-      - Vill du hellre ge eller skänka? Då är det helt gratis att annonsera på Traid
+      - Att ge eller skänka är helt kostnadsfritt på Traid
       - Vi ser till att det du skänker hamnar där det ska
     icon: /img/icons/hand.svg
 ---
