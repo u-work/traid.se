@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
-import { Link, scroller } from 'react-scroll';
+import { Link } from 'react-scroll';
+
+import HambergurIcon from '../home/hamburgerIcon';
 
 const Navbar = ({ path }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <NavbarWrapper>
+    <NavbarWrapper isOpen={isOpen}>
       <div className="row">
         <div className="logo">
           <GatsbyLink to="/">
@@ -23,6 +31,7 @@ const Navbar = ({ path }) => {
                 offset={-40}
                 duration={500}
                 className="navLink"
+                onClick={() => setIsOpen(false)}
               >
                 Hur fungerar Traid
               </Link>
@@ -33,10 +42,15 @@ const Navbar = ({ path }) => {
                 offset={-80}
                 duration={500}
                 className="navLink"
+                onClick={() => setIsOpen(false)}
               >
                 Hållbarhet
               </Link>
-              <GatsbyLink to="/about-us" className="navLink">
+              <GatsbyLink
+                to="/about-us"
+                className="navLink"
+                onClick={() => setIsOpen(false)}
+              >
                 Om Traid
               </GatsbyLink>
               <Link
@@ -46,6 +60,7 @@ const Navbar = ({ path }) => {
                 offset={-40}
                 duration={500}
                 className="navLink"
+                onClick={() => setIsOpen(false)}
               >
                 Kontakt
               </Link>
@@ -58,7 +73,11 @@ const Navbar = ({ path }) => {
               <GatsbyLink to="/#sectionSustainability" className="navLink">
                 Hållbarhet
               </GatsbyLink>
-              <GatsbyLink to="/about-us" className="navLink">
+              <GatsbyLink
+                to="/about-us"
+                className="navLink"
+                onClick={() => setIsOpen(false)}
+              >
                 Om Traid
               </GatsbyLink>
               <GatsbyLink to="/#sectionContact" className="navLink">
@@ -67,6 +86,7 @@ const Navbar = ({ path }) => {
             </>
           )}
         </div>
+        <HambergurIcon clicked={toggleMenu} isOpen={isOpen} />
       </div>
     </NavbarWrapper>
   );
@@ -88,6 +108,7 @@ const NavbarWrapper = styled.nav`
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 
   .logo {
@@ -114,11 +135,32 @@ const NavbarWrapper = styled.nav`
   }
 
   @media (max-width: ${props => props.theme.mobileWidth}) {
+    position: fixed;
+    background-color: #fff;
     .row {
       justify-content: center;
     }
+
     .nav {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-top: 2rem;
+      height: 100vh;
+      width: 100%;
+      transform: ${props =>
+        props.isOpen ? 'translateX(0)' : 'translateX(100%)'};
+
+      position: fixed;
+      top: 6rem;
+      background-color: #fff;
+      transition: transform 0.2s ease-out;
+
+      .navLink {
+        font-size: 3rem;
+        font-weight: 600;
+        color: #333;
+      }
     }
   }
 `;
