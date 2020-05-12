@@ -6,7 +6,7 @@ opacity: 1
 ---
 Traid Sweden AB grundades 2019 med ett gemensamt mål och en enad vision. Det ska vara enkelt att bidra till en bättre värld.
 
-Vår filosofi bygger på konceptet **'effektiv altruism'**, som handlar om att hjälpa människor på bästa möjliga sätt utifrån bästa förmåga. Det är därför det så viktigt för oss att utveckla de rätta verktygen som på ett enkelt sätt möjliggör korrespondens mellan individens bästa förmåga och största möjliga humanitära påverkan.
+Vår filosofi bygger på konceptet **'effektiv altruism'**, som handlar om att hjälpa människor på bästa möjliga sätt utifrån bästa förmåga. Det är därför det är så viktigt för oss att utveckla de rätta verktygen som på ett enkelt sätt möjliggör korrespondens mellan individens bästa förmåga och största möjliga humanitära påverkan.
 
 Det går inte att understryka hur viktig varje individuell insats är när det gäller att:
 
@@ -26,7 +26,7 @@ Det har tyvärr blivit alltför vanligt med fusk inom välfärden och biståndet
 
 Enstaka projekt, ideella verksamheter och andra icke vinstdrivna organisationer.  I vissa fall även enstaka  personer. 
 
-##### **Våra huvudkriterier för få stöd och pengar är:**
+##### **Våra huvudkriterier för att få stöd och pengar är:**
 
 Rätt typ av aktivitet - Aktiviteter ska utgå från relevant forskning och / eller särskild kunskap inom området. 
 

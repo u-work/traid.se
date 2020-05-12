@@ -42,6 +42,8 @@ const SectionAboutWrapper = styled.section`
 
   a {
     font-size: 2rem;
+    text-decoration: underline;
+    color: ${props => props.theme.primaryColor}
   }
 
   h3 {
