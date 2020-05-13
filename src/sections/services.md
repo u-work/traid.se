@@ -2,7 +2,7 @@
 services:
   - title: Köp
     description:
-      - Handla seconhandvaror och andra fynd på Traid 
+      - Handla secondhand-varor och andra fynd på Traid 
       - Minst 10% av annonsens pris skänks direkt till välgörande ändamål
     icon: /img/icons/commerce-and-shopping.svg
   - title: Sälj
