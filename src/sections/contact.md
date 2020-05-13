@@ -4,11 +4,11 @@ team:
   - name: Erik Skeppar
     position: Co-founder
     email: erik@traid.se
-    image: /img/erik.jpeg
+    image: /img/erik-1-sur-3-.jpg
   - name: Robin Sigerbrant
     position: Co-founder
     email: robin@traid.se
-    image: /img/placeholder.png
+    image: /img/namnlös.jpg
   - name: Francis Menkes
     position: Lead Developer
     email: francis@traid.se
