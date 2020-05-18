@@ -1,7 +1,7 @@
 ---
-templateKey: 'about-page'
-bgImage: '/img/Omoss.jpg'
-title: ''
+templateKey: about-page
+title: Om oss
+bgImage: /img/Omoss.jpg
 opacity: 1
 ---
 Traid Sweden AB grundades 2019 med ett gemensamt mål och en enad vision. Det ska vara enkelt att bidra till en bättre värld.
@@ -24,7 +24,7 @@ Det har tyvärr blivit alltför vanligt med fusk inom välfärden och biståndet
 
 ##### Vi stödjer:
 
-Enstaka projekt, ideella verksamheter och andra icke vinstdrivna organisationer.  I vissa fall även enstaka  personer. 
+Enstaka projekt, ideella verksamheter och andra icke vinstdrivna organisationer.
 
 ##### **Våra huvudkriterier för att få stöd och pengar är:**
 
