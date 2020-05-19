@@ -43,7 +43,7 @@ const Layout = ({ children, path }) => {
         >
           Vi använder cookies för att ständigt förbättra sidan för våra
           användare, men självklart bara med ditt medgivande.{' '}
-          <Link style={{ textDecoration: 'underline' }} to="/cookies">
+          <Link style={{ textDecoration: 'underline' }} to="/privacy-policy">
             Läs mer om hur vi använder cookies.
           </Link>
         </CookieConsent>
