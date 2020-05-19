@@ -15,7 +15,7 @@ const CookiePolicy = ({ data }) => {
   return (
     <>
       <Helmet>
-        <title>Cookie policy | Traid</title>
+        <title>Privacy policy | Traid</title>
       </Helmet>
       <Layout>
         <Hero data={{ frontmatter }} sidePage />

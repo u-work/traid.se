@@ -127,6 +127,7 @@ collections:
           - name: title
             label: Title
             widget: string
+            required: false
           - name: bgImage
             label: Hero Image
             widget: image

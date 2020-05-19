@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-title: Om oss
+title: ''
 bgImage: /img/Omoss.jpg
 opacity: 1
 ---

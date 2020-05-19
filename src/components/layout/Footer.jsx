@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
+import { Link } from 'gatsby';
 
 const emailRegex = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/;
 
@@ -11,9 +12,12 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <div className="container">
-        <p style={{ fontSize: '4rem', color: '#fff', textAlign: 'center' }}>
-          TRAID
-        </p>
+        <div className="footer-brand">
+          <p style={{ fontSize: '4rem', color: '#fff', textAlign: 'center' }}>
+            TRAID
+          </p>
+          <Link to="/privacy-policy">Sekretesspolicy</Link>
+        </div>
 
         <FormWrapper
           onSubmit={async e => {
@@ -66,9 +70,21 @@ const FooterWrapper = styled.footer`
     justify-content: space-evenly;
   }
 
+  .footer-brand {
+    a {
+      color: #fff;
+    }
+  }
+
   @media (max-width: ${props => props.theme.mobileWidth}) {
     .container {
       flex-direction: column;
+    }
+
+    .footer-brand {
+      a {
+        display: none;
+      }
     }
   }
 `;
