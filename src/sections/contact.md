@@ -16,5 +16,5 @@ team:
   - name: David von Gegerfelt
     position: Lead Designer
     email: david@traid.se
-    image: /img/david.jpeg
+    image: /img/david.jpg
 ---
