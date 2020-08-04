@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Fade } from 'react-reveal';
 
 const ServiceCard = ({ image, title, desc, delay }) => {
   return (
@@ -8,26 +7,25 @@ const ServiceCard = ({ image, title, desc, delay }) => {
       <div className="top">
         <img src={image} alt={title} />
       </div>
-      <Fade bottom fraction={0.4} delay={delay}>
-        <div className="bottom">
-          <h3 className="title">{title}</h3>
-          <ul className="desc">
-            {desc.map(description => (
-              <li>{description}</li>
-            ))}
-          </ul>
-        </div>
-      </Fade>
+
+      <div className="bottom">
+        <h3 className="title">{title}</h3>
+        <ul className="desc">
+          {desc.map(description => (
+            <li>{description}</li>
+          ))}
+        </ul>
+      </div>
     </ServiceCardWrapper>
   );
 };
 
 const ServiceCardWrapper = styled.div`
-  min-width: 30rem;
-  min-height: 40rem;
+  width: 30rem;
+  height: 46rem;
   display: flex;
   flex-direction: column;
-  margin: 0 5rem;
+  align-items: center;
 
   .top {
     height: 40%;
@@ -63,7 +61,7 @@ const ServiceCardWrapper = styled.div`
       font-weight: 400;
       color: ${props => props.theme.textPrimary};
       line-height: 2.5rem;
-      
+
       li {
         margin-bottom: 1.5rem;
         list-style: outside;
@@ -72,23 +70,36 @@ const ServiceCardWrapper = styled.div`
   }
   @media (max-width: ${props => props.theme.tabletWidth}) {
     margin: 0;
-  }
+    width: 25rem;
+    height: 50rem;
 
-  @media (max-width: ${props => props.theme.mobileWidth}) {
-    height: 10rem;
     .top {
-      padding: 2rem;
-      padding-left: 3rem;
+      padding: 0;
+      width: 50%;
     }
 
     .bottom {
-      .desc {
-        padding: 0;
-        text-align: center;
-        margin-left: 0;
-        font-size: 1.2rem;
-        li {
-          list-style: none;
+      padding: 0;
+      padding-top: 2rem;
+    }
+
+    @media (max-width: ${props => props.theme.mobileWidth}) {
+      height: auto;
+
+      .top {
+        padding: 2rem;
+        padding-left: 3rem;
+      }
+
+      .bottom {
+        .desc {
+          padding: 0;
+          text-align: center;
+          margin-left: 0;
+          font-size: 1.2rem;
+          li {
+            list-style: none;
+          }
         }
       }
     }

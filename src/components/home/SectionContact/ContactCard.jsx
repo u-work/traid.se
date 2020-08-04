@@ -5,12 +5,12 @@ import Image from 'gatsby-image';
 const ContactCard = ({ name, email, image, position }) => {
   return (
     <ContactCardWrapper>
-      <div className="top mb-1">
-        <Image fluid={image} />
+      <div className="top mb-2">
+        <Image fluid={image} className="image" />
       </div>
       <div className="bottom">
         <h4 className="member-name">{name}</h4>
-        <h5 className="mb-2">{position}</h5>
+        <h5 className="mb-1">{position}</h5>
         <p>{email}</p>
       </div>
     </ContactCardWrapper>
@@ -26,15 +26,21 @@ const ContactCardWrapper = styled.div`
 
   .top {
     width: 100%;
-    height: 40%;
-    padding: 2rem;
+
+    .image {
+      width: 20rem;
+      height: 20rem;
+      border: 4px solid #ccc;
+      border-radius: 50%;
+    }
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center;
-      border-radius: 50%;
+
+      overflow: hidden;
     }
   }
 
@@ -44,14 +50,14 @@ const ContactCardWrapper = styled.div`
 
   .bottom {
     width: 100%;
-    height: 60%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     text-align: center;
   }
 
   @media (max-width: ${props => props.theme.tabletWidth}) {
-    margin: 0;
+    margin: 0 2rem;
   }
 
   @media (max-width: ${props => props.theme.mobileWidth}) {

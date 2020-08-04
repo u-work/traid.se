@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Fade } from 'react-reveal';
 
 import ContactCard from './ContactCard';
 
@@ -11,19 +10,16 @@ const SectionContact = ({ data }) => {
   return (
     <SectionContactWrapper>
       <div className="container">
-        <Fade>
-          <h3 className="mb-3">{frontmatter.data}</h3>
-        </Fade>
+        <h3 className="mb-3">{frontmatter.data}</h3>
+
         <div className="content">
           {frontmatter.team.map((member, index) => (
-            <Fade key={member.name} bottom delay={(index + 1) * 100}>
-              <ContactCard
-                name={member.name}
-                email={member.email}
-                image={member.image.childImageSharp.fluid}
-                position={member.position}
-              />
-            </Fade>
+            <ContactCard
+              name={member.name}
+              email={member.email}
+              image={member.image.childImageSharp.fluid}
+              position={member.position}
+            />
           ))}
         </div>
       </div>
@@ -47,6 +43,14 @@ const SectionContactWrapper = styled.section`
     display: flex;
     justify-content: center;
     overflow: hidden;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: ${props => props.theme.tabletWidth}) {
+
+    .content {
+      flex-wrap: wrap;
+    }
   }
 
 

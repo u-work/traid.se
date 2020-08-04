@@ -71,6 +71,7 @@ const FooterWrapper = styled.footer`
   }
 
   .footer-brand {
+    padding-left: 2rem;
     a {
       color: #fff;
     }
@@ -93,6 +94,7 @@ const FormWrapper = styled.form`
   display: flex;
   align-items: flex-end;
   margin-left: auto;
+  padding: 0 2rem;
 
   .form-group {
     display: flex;
@@ -142,6 +144,10 @@ const FormWrapper = styled.form`
       opacity: 1;
       transform: translateY(0px);
     }
+  }
+
+  @media (max-width: ${props => props.theme.tabletWidth}) {
+    margin: 0;
   }
 
   @media (max-width: ${props => props.theme.mobileWidth}) {

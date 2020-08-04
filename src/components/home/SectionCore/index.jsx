@@ -1,38 +1,46 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Image from 'gatsby-image';
-import { Fade } from 'react-reveal';
+
+import VisibilitySensor from '../../../utils/VisibilitySensor';
+import { fadeIn } from '../../../utils/animations';
 
 const SectionCore = ({ data }) => {
   const { frontmatter } = data;
   return (
     <SectionCoreWrapper>
-      <div className="content">
-        <Fade left>
-          <div className="list">
-            <h4 className="list-title">{frontmatter.title}</h4>
-            <ul className="list-content">
-              {frontmatter.content.map(item => (
-                <li key={item.title} className="list-content-item">
-                  <div className="icon-container">
-                    <img
-                      src={item.icon.childImageSharp.fixed.src}
-                      alt={item.title}
-                    />
-                  </div>
-                  {item.description}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Fade>
-        <Fade right>
-          <div className="circle">
-            <Image fluid={frontmatter.image.childImageSharp.fluid} />
-            <p className="circle-label">{frontmatter.circleCaption}</p>
-          </div>
-        </Fade>
-      </div>
+      <VisibilitySensor minTopValue={300}>
+        {isShown => {
+          return (
+            <div className="content">
+              <div className="list">
+                <h4 className="list-title">{frontmatter.title}</h4>
+                <ul className="list-content">
+                  {frontmatter.content.map((item, idx) => (
+                    <AnimateItem isShown={isShown} delay={idx / 4}>
+                      <li key={item.title} className="list-content-item">
+                        <div className="icon-container">
+                          <img
+                            src={item.icon.childImageSharp.fixed.src}
+                            alt={item.title}
+                          />
+                        </div>
+                        {item.description}
+                      </li>
+                    </AnimateItem>
+                  ))}
+                </ul>
+              </div>
+              <AnimateCircle isShown={isShown}>
+                <div className="circle">
+                  <Image fluid={frontmatter.image.childImageSharp.fluid} />
+                  <p className="circle-label">{frontmatter.circleCaption}</p>
+                </div>
+              </AnimateCircle>
+            </div>
+          );
+        }}
+      </VisibilitySensor>
     </SectionCoreWrapper>
   );
 };
@@ -117,6 +125,16 @@ const SectionCoreWrapper = styled.section`
     text-align: center;
   }
 
+  @media (max-width: ${props => props.theme.tabletWidth}) {
+    .list {
+      padding-left: 1rem;
+    }
+
+    .circle {
+      padding-right: 2rem;
+    }
+  }
+
   @media (max-width: ${props => props.theme.mobileWidth}) {
     height: 100%;
 
@@ -169,5 +187,21 @@ const SectionCoreWrapper = styled.section`
     }
   }
 `;
+const AnimateCircle = styled.div`
+  visibility: ${props => (props.isShown ? 'visible' : 'hidden')};
+  ${props =>
+    props.isShown &&
+    css`
+      animation: ${fadeIn('down')} 0.8s ease-out backwards;
+    `}
+`;
 
+const AnimateItem = styled.div`
+  visibility: ${props => (props.isShown ? 'visible' : 'hidden')};
+  ${props =>
+    props.isShown &&
+    css`
+      animation: ${fadeIn('down')} 0.8s ease-out ${props.delay}s backwards;
+    `}
+`;
 export default SectionCore;

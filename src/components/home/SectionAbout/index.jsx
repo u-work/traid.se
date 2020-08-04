@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
-import { Fade } from 'react-reveal';
 import { Link } from 'gatsby';
 
 import { title } from '../../../styles/theme';
@@ -11,26 +10,18 @@ const SectionAbout = ({ data }) => {
 
   return (
     <SectionAboutWrapper>
-      <Fade bottom fraction={0.1}>
-        <div className="container mb-2">
-          <h3 className="mb-2">{frontmatter.title}</h3>
-          <div className="content">
-            <div className="description">
-              <div
-                className="description-content"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
-              <Link to="/about-us">{frontmatter.linkText}</Link>
-            </div>
-            {/* <div className="image-container">
-              <Image
-                className="image"
-                fluid={frontmatter.image.childImageSharp.fluid}
-              />
-            </div> */}
+      <div className="container mb-2">
+        <h3 className="mb-2">{frontmatter.title}</h3>
+        <div className="content">
+          <div className="description">
+            <div
+              className="description-content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+            <Link to="/about-us">{frontmatter.linkText}</Link>
           </div>
         </div>
-      </Fade>
+      </div>
     </SectionAboutWrapper>
   );
 };
@@ -92,6 +83,7 @@ const SectionAboutWrapper = styled.section`
   }
 
   @media (max-width: ${props => props.theme.tabletWidth}){
+
     .content {
       .description{
       padding: 1rem;
